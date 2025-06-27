@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Why Us | Work's Best Friend</title>
+  <title>Why Us | Echelon Outdoor</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
@@ -222,7 +222,7 @@
   </nav>
 
   <section class="hero-banner" data-aos="fade-down">
-    <h1>Why Work’s Best Friend?</h1>
+    <h1>Why Echelon?</h1>
     <p>Your trusted partner for high-impact billboard advertising with less hassle and more results.</p>
   </section>
 
@@ -252,7 +252,7 @@
     </div>
   </main>
 
-  <footer>© 2025 Work’s Best Friend</footer>
+  <footer>© 2025 Echelon Outdoor</footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
