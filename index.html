@@ -67,6 +67,29 @@
       font-weight: 500;
     }
 
+    /* Book a Call Button - Global */
+    .sticky-call-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #3778f0;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .sticky-call-button:hover {
+      background-color: #2e65c8;
+    }
+
     @media (max-width: 800px) {
       .menu-toggle {
         display: flex;
@@ -88,39 +111,16 @@
       #nav-menu.active {
         display: flex;
       }
-
-      .sticky-call-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #3778f0;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border: none;
-        border-radius: 50px;
-        font-weight: bold;
-        font-size: 1rem;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        z-index: 9999;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-      }
-
-      .sticky-call-button:hover {
-        background-color: #2e65c8;
-      }
     }
 
     /* HERO SECTION */
     .hero {
       position: relative;
       height: 100vh;
-      background-image: url('https://worksbestfriend.github.io/NYCSkyline.png'); /* initial image */
+      background-image: url('https://worksbestfriend.github.io/NYCSkyline.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      transition: background-image 1s ease-in-out;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -200,7 +200,6 @@
       width: 64px;
       height: 64px;
       margin-bottom: 1rem;
-      filter: drop-shadow(0 0 2px rgba(55,120,240,0.6));
     }
 
     .feature-item h3 {
@@ -260,16 +259,11 @@
       margin: auto;
     }
 
-    .hero-overlay-text h1,
-    .hero-overlay-text p {
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    }
-
     .hero-logo {
       width: 120px;
       margin-bottom: 1rem;
-      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
     }
+
   </style>
 </head>
 <body>
@@ -366,6 +360,5 @@
   </script>
 
   <a href="/contact/" class="sticky-call-button">Book a Call</a>
-  
 </body>
 </html>
