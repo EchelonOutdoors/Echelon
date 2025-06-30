@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Echelon Outdoor</title>
+  <title>Work's Best Friend</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!-- Preload images -->
@@ -128,15 +128,6 @@
       text-align: center;
       color: white;
       overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top:0; left:0; right:0; bottom:0;
-      background: linear-gradient(135deg, rgba(55,120,240,0.6), rgba(55,120,240,0.2));
-      animation: pulse 6s ease-in-out infinite alternate;
-      z-index: 1;
     }
 
     .hero > div {
@@ -268,6 +259,17 @@
       max-width: 700px;
       margin: auto;
     }
+
+    .hero-overlay-text h1,
+    .hero-overlay-text p {
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-logo {
+      width: 120px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+    }
   </style>
 </head>
 <body>
@@ -280,9 +282,9 @@
         <span></span><span></span><span></span>
       </div>
       <ul id="nav-menu">
-        <li><a href="/Services/">Services</a></li>
-        <li><a href="/Why-Us/">Why Us</a></li>
-        <li><a href="/Contact/">Contact</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/why-us/">Why Us</a></li>
+        <li><a href="/contact/">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -352,7 +354,7 @@
     </div>
   </section>
 
-  <div class="footer">© 2025 Echelon Outdoor</div>
+  <div class="footer">© 2025 Work’s Best Friend</div>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -364,22 +366,6 @@
   </script>
 
   <a href="/contact/" class="sticky-call-button">Book a Call</a>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const hero = document.querySelector('.hero');
-      const heroImages = [
-        'https://worksbestfriend.github.io/NYCSkyline.png',
-        'https://worksbestfriend.github.io/MiamiSkyline.jpg',
-        'https://worksbestfriend.github.io/LondonSkyline.jpeg'
-      ];
-      let currentImage = 0;
-
-      setInterval(() => {
-        currentImage = (currentImage + 1) % heroImages.length;
-        hero.style.backgroundImage = `url('${heroImages[currentImage]}')`;
-      }, 5000);
-    });
-  </script>
+  
 </body>
 </html>
