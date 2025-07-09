@@ -1,214 +1,253 @@
-<!DOCTYPE html>
+Can you mimic all the colorings on this: <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Why Us | Echelon Outdoor</title>
+  <title>Services | Echelon Outdoor</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #3A2E1E;
-    background-color: #ffffff;
-  }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1a1a1a;
+      background-color: #ffffff;
+    }
 
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    border-bottom: 1px solid #E7DCCB;
-    z-index: 999;
-  }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      border-bottom: 1px solid #eee;
+      z-index: 999;
+    }
 
-  .nav-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-inner img {
-    height: 40px;
-  }
-
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
-  }
-
-  .menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: #3A2E1E;
-    border-radius: 2px;
-  }
-
-  #nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  #nav-menu li a {
-    text-decoration: none;
-    color: #3A2E1E;
-    font-weight: 500;
-  }
-
-  @media (max-width: 800px) {
-    .menu-toggle {
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-inner img {
+      height: 40px;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: #1a1a1a;
+      border-radius: 2px;
     }
 
     #nav-menu {
-      position: absolute;
-      top: 60px;
-      right: 2rem;
-      background: white;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
-      border: 1px solid #E7DCCB;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      display: none;
-    }
-
-    #nav-menu.active {
+      list-style: none;
       display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
     }
-  }
 
-  .hero-banner {
-    background: #A7793C;
-    color: white;
-    padding: 4rem 2rem;
-    text-align: center;
-    margin-top: 60px;
-  }
+    #nav-menu li a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
+    }
 
-  .hero-banner h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
+    @media (max-width: 800px) {
+      .menu-toggle {
+        display: flex;
+      }
 
-  .hero-banner p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto;
-  }
+      #nav-menu {
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        background: white;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid #eee;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        display: none;
+      }
 
-  main {
-    padding: 4rem 2rem 2rem;
-    max-width: 900px;
-    margin: auto;
-  }
+      #nav-menu.active {
+        display: flex;
+      }
+    }
 
-  h2 {
-    font-size: 1.75rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    color: #A7793C;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
+    .hero-banner {
+      background: #3778f0;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
 
-  h2::before {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-image: url('https://img.icons8.com/ios-filled/24/A7793C/checkmark.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+    .hero-banner h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
 
-  p {
-    line-height: 1.7;
-    font-size: 1.1rem;
-    color: #3A2E1E;
-    margin-bottom: 1.5rem;
-  }
+    .hero-banner p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-  .cta {
-    background-color: #FCF7F1;
-    border-left: 6px solid #A7793C;
-    padding: 2rem;
-    border-radius: 12px;
-    margin-top: 3rem;
-    text-align: center;
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 8px rgba(167, 121, 60, 0.15);
-    transition: box-shadow 0.3s ease;
-  }
+    main {
+      padding: 4rem 2rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-  .cta:hover {
-    box-shadow: 0 6px 14px rgba(167, 121, 60, 0.35);
-  }
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
 
-  .cta p {
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #3A2E1E;
-  }
+    .service-card {
+      max-width: 280px;
+      text-align: center;
+    }
 
-  .cta a {
-    display: inline-block;
-    background-color: #A7793C;
-    color: white;
-    text-decoration: none;
-    padding: 0.75rem 1.75rem;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-  }
+    .service-card img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 2px rgba(55,120,240,0.6));
+    }
 
-  .cta a:hover {
-    background-color: #93672F;
-  }
+    .service-card h3 {
+      color: #3778f0;
+      margin-bottom: 0.5rem;
+    }
 
-  footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #A7793C;
-    padding: 2rem 0;
-    margin-top: 4rem;
-  }
+    .service-card p {
+      font-size: 1.05rem;
+      color: #333;
+    }
 
-  .sticky-call-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #A7793C;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin: 4rem 0 2rem;
+      color: #3778f0;
+    }
 
-  .sticky-call-button:hover {
-    background-color: #93672F;
-  }
-</style>
+    .how-it-works-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .how-it-works-step-number {
+      min-width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: #3778f0;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .how-it-works-step h3 {
+      margin: 0;
+    }
+
+    .how-it-works-step p {
+      margin-top: 0.25rem;
+      color: #444;
+    }
+
+    .how-it-works-container {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Markets We Serve */
+    .markets-section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .markets-section h2 {
+      color: #3778f0;
+      margin-bottom: 1rem;
+    }
+    .markets-section p {
+      font-size: 1rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+    }
+    .markets-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .markets-list li {
+      background: #e1ecfb;
+      color: #3778f0;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      padding: 2rem 0;
+      margin-top: 4rem;
+    }
+
+    .sticky-call-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #3778f0;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .sticky-call-button:hover {
+      background-color: #2e65c8;
+    }
+  </style>
 </head>
 <body>
 
@@ -219,35 +258,96 @@
         <span></span><span></span><span></span>
       </div>
       <ul id="nav-menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/Services/">Services</a></li>
-        <li><a href="/Contact/">Contact</a></li>
-      </ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/Why-Us/">Why Us</a></li>
+  <li><a href="/Contact/">Contact</a></li>
+</ul>
     </div>
   </nav>
 
   <section class="hero-banner" data-aos="fade-down">
-    <h1>Why Echelon?</h1>
-    <p>Your trusted partner for high-impact billboard advertising with less hassle and more results.</p>
+    <h1>What We Do</h1>
+    <p>From strategy to signage, we help you launch billboard campaigns that hit your goals — not just the road.</p>
   </section>
 
   <main>
-    <h2>Strategic Location Access</h2>
-    <p>We have direct access to premium billboard inventory in high-traffic areas across major U.S. and international cities — often before the bigger firms do. Whether you're looking to go local or national, we’ll find the placements that make your message impossible to miss.</p>
 
-    <h2>Flexible Budget Options</h2>
-    <p>Big visibility doesn't need a big agency retainer. We’ll help you build a campaign that fits your goals *and* your budget — whether you're a solo founder or a scaling brand. No bloated fees, no waste, no nonsense.</p>
+    <section class="markets-section" data-aos="fade-up">
+      <h2>Markets We Serve</h2>
+      <p>We work in key cities and regions across the country to maximize your billboard campaign's impact.</p>
+      <ul class="markets-list" aria-label="Markets We Serve List">
+        <li>Miami</li>
+        <li>Hoboken</li>
+        <li>Boston</li>
+        <li>NYC</li>
+        <li>Chicago</li>
+        <li>Baltimore</li>
+        <li>San Francisco</li>
+        <li>Los Angeles</li>
+        <li>Orlando</li>
+        <li>Raleigh</li>
+        <li>Austin</li>
+        <li>Houston</li>
+        <li>Dallas</li>
+        <li>Charlotte</li>
+        <li>Denver</li>
+        <li>Colorado</li>
+        <li>San Diego</li>
+        <li>Phoenix</li>
+        <li>Seattle</li>
+        <li>Atlanta</li>
+        <li>Fort Lauderdale</li>
+        <li>Salt Lake City</li>
+        <li>Tampa</li>
+        <li>Naples</li>
+      </ul>
+    </section>
 
-    <h2>Fast Turnaround. No Red Tape.</h2>
-    <p>Skip the delays. We move quickly, working directly with billboard owners and operators to get your campaign live — fast. We're small, nimble, and focused on outcomes, not billable hours.</p>
+    <section data-aos="fade-up">
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios-filled/64/3778f0/billboard.png" alt="Billboard" />
+          <h3>Billboard Placement</h3>
+          <p>Local and national outdoor inventory tailored to your goals.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios-filled/64/3778f0/strategy-board.png" alt="Strategy" />
+          <h3>Campaign Strategy</h3>
+          <p>Data-backed targeting and planning to maximize ROI.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios-filled/64/3778f0/design.png" alt="Design" />
+          <h3>Creative Support</h3>
+          <p>Billboard designs that stop traffic and spark action.</p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Real Strategy. Real Support.</h2>
-    <p>You’ll work with a team that cares about results, not just placements. We help you design, target, and execute your billboard campaign from start to finish, with creative input and strategy that align with your brand.</p>
+    <h2 data-aos="fade-up">How It Works</h2>
+    <section class="how-it-works-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="how-it-works-step">
+        <div class="how-it-works-step-number">1</div>
+        <div>
+          <h3>Discovery</h3>
+          <p>Tell us your goals, audience, and budget. We'll guide you on what works best for your market and message.</p>
+        </div>
+      </div>
+      <div class="how-it-works-step">
+        <div class="how-it-works-step-number">2</div>
+        <div>
+          <h3>Proposal</h3>
+          <p>We present you with billboard location options, pricing, and timelines — all tailored and transparent.</p>
+        </div>
+      </div>
+      <div class="how-it-works-step">
+        <div class="how-it-works-step-number">3</div>
+        <div>
+          <h3>Go Live</h3>
+          <p>We handle everything from contracts to installation. You launch your campaign, we handle the logistics.</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="cta" data-aos="fade-up">
-      <p>Ready to get started? Let’s talk about where your next billboard should go.</p>
-      <a href="/Contact/">Contact Us</a>
-    </div>
   </main>
 
   <footer>© 2025 Echelon Outdoor</footer>
