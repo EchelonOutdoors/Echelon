@@ -1,4 +1,4 @@
-Can you mimic all the colorings on this: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,8 +9,8 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #1a1a1a;
-      background-color: #ffffff;
+      background-color: #f7f1e6;  /* cream background */
+      color: #6b1f24;             /* burgundy text */
     }
 
     nav {
@@ -18,8 +18,8 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
       top: 0;
       left: 0;
       width: 100%;
-      background-color: white;
-      border-bottom: 1px solid #eee;
+      background-color: #f7f1e6;
+      border-bottom: 1px solid #d6cdc1;
       z-index: 999;
     }
 
@@ -46,7 +46,7 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
     .menu-toggle span {
       width: 25px;
       height: 3px;
-      background-color: #1a1a1a;
+      background-color: #6b1f24;
       border-radius: 2px;
     }
 
@@ -60,7 +60,7 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
 
     #nav-menu li a {
       text-decoration: none;
-      color: #1a1a1a;
+      color: #6b1f24;
       font-weight: 500;
     }
 
@@ -73,11 +73,11 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
         position: absolute;
         top: 60px;
         right: 2rem;
-        background: white;
+        background: #f7f1e6;
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
-        border: 1px solid #eee;
+        border: 1px solid #d6cdc1;
         box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         display: none;
       }
@@ -88,10 +88,11 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
     }
 
     .hero-banner {
-      background: #3778f0;
+      background: #6b1f24;
       color: white;
       padding: 4rem 2rem;
       text-align: center;
+      margin-top: 60px;
     }
 
     .hero-banner h1 {
@@ -103,6 +104,7 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
       font-size: 1.2rem;
       max-width: 700px;
       margin: 0 auto;
+      color: #f5d48a;
     }
 
     main {
@@ -128,24 +130,24 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
       width: 64px;
       height: 64px;
       margin-bottom: 1rem;
-      filter: drop-shadow(0 0 2px rgba(55,120,240,0.6));
+      filter: drop-shadow(0 0 2px rgba(107, 31, 36, 0.3));
     }
 
     .service-card h3 {
-      color: #3778f0;
+      color: #6b1f24;
       margin-bottom: 0.5rem;
     }
 
     .service-card p {
       font-size: 1.05rem;
-      color: #333;
+      color: #3a3a3a;
     }
 
     h2 {
       text-align: center;
       font-size: 2rem;
       margin: 4rem 0 2rem;
-      color: #3778f0;
+      color: #6b1f24;
     }
 
     .how-it-works-step {
@@ -159,7 +161,7 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
       min-width: 32px;
       height: 32px;
       border-radius: 50%;
-      background-color: #3778f0;
+      background-color: #6b1f24;
       color: white;
       display: flex;
       align-items: center;
@@ -182,23 +184,25 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
       margin: auto;
     }
 
-    /* Markets We Serve */
     .markets-section {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
       text-align: center;
     }
+
     .markets-section h2 {
-      color: #3778f0;
+      color: #6b1f24;
       margin-bottom: 1rem;
     }
+
     .markets-section p {
       font-size: 1rem;
       color: #555;
       max-width: 700px;
       margin: 0 auto 1.5rem;
     }
+
     .markets-list {
       display: flex;
       flex-wrap: wrap;
@@ -208,9 +212,10 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
       padding: 0;
       margin: 0;
     }
+
     .markets-list li {
-      background: #e1ecfb;
-      color: #3778f0;
+      background: #f0e2d8;
+      color: #6b1f24;
       padding: 6px 12px;
       border-radius: 20px;
       font-weight: 600;
@@ -221,7 +226,7 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
     footer {
       text-align: center;
       font-size: 0.9rem;
-      color: #aaa;
+      color: #7a6d68;
       padding: 2rem 0;
       margin-top: 4rem;
     }
@@ -230,7 +235,7 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #3778f0;
+      background-color: #6b1f24;
       color: white;
       padding: 0.75rem 1.5rem;
       border: none;
@@ -245,7 +250,7 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
     }
 
     .sticky-call-button:hover {
-      background-color: #2e65c8;
+      background-color: #56161c;
     }
   </style>
 </head>
@@ -258,10 +263,10 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
         <span></span><span></span><span></span>
       </div>
       <ul id="nav-menu">
-  <li><a href="/">Home</a></li>
-  <li><a href="/Why-Us/">Why Us</a></li>
-  <li><a href="/Contact/">Contact</a></li>
-</ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/Why-Us/">Why Us</a></li>
+        <li><a href="/Contact/">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -276,47 +281,27 @@ Can you mimic all the colorings on this: <!DOCTYPE html>
       <h2>Markets We Serve</h2>
       <p>We work in key cities and regions across the country to maximize your billboard campaign's impact.</p>
       <ul class="markets-list" aria-label="Markets We Serve List">
-        <li>Miami</li>
-        <li>Hoboken</li>
-        <li>Boston</li>
-        <li>NYC</li>
-        <li>Chicago</li>
-        <li>Baltimore</li>
-        <li>San Francisco</li>
-        <li>Los Angeles</li>
-        <li>Orlando</li>
-        <li>Raleigh</li>
-        <li>Austin</li>
-        <li>Houston</li>
-        <li>Dallas</li>
-        <li>Charlotte</li>
-        <li>Denver</li>
-        <li>Colorado</li>
-        <li>San Diego</li>
-        <li>Phoenix</li>
-        <li>Seattle</li>
-        <li>Atlanta</li>
-        <li>Fort Lauderdale</li>
-        <li>Salt Lake City</li>
-        <li>Tampa</li>
-        <li>Naples</li>
+        <li>Miami</li><li>Hoboken</li><li>Boston</li><li>NYC</li><li>Chicago</li><li>Baltimore</li><li>San Francisco</li>
+        <li>Los Angeles</li><li>Orlando</li><li>Raleigh</li><li>Austin</li><li>Houston</li><li>Dallas</li><li>Charlotte</li>
+        <li>Denver</li><li>Colorado</li><li>San Diego</li><li>Phoenix</li><li>Seattle</li><li>Atlanta</li><li>Fort Lauderdale</li>
+        <li>Salt Lake City</li><li>Tampa</li><li>Naples</li>
       </ul>
     </section>
 
     <section data-aos="fade-up">
       <div class="services-grid">
         <div class="service-card">
-          <img src="https://img.icons8.com/ios-filled/64/3778f0/billboard.png" alt="Billboard" />
+          <img src="https://img.icons8.com/ios-filled/64/6b1f24/billboard.png" alt="Billboard" />
           <h3>Billboard Placement</h3>
           <p>Local and national outdoor inventory tailored to your goals.</p>
         </div>
         <div class="service-card">
-          <img src="https://img.icons8.com/ios-filled/64/3778f0/strategy-board.png" alt="Strategy" />
+          <img src="https://img.icons8.com/ios-filled/64/6b1f24/strategy-board.png" alt="Strategy" />
           <h3>Campaign Strategy</h3>
           <p>Data-backed targeting and planning to maximize ROI.</p>
         </div>
         <div class="service-card">
-          <img src="https://img.icons8.com/ios-filled/64/3778f0/design.png" alt="Design" />
+          <img src="https://img.icons8.com/ios-filled/64/6b1f24/design.png" alt="Design" />
           <h3>Creative Support</h3>
           <p>Billboard designs that stop traffic and spark action.</p>
         </div>
