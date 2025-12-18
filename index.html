@@ -219,15 +219,27 @@
       margin-bottom: 1rem;
       color: var(--brand-secondary);
     }
-    /* PORTFOLIO */
+    /* PORTFOLIO - FIXED FOR 3 PER ROW */
     .portfolio {
       padding: 6rem 2rem;
       background: #f8fafc;
     }
     .portfolio-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
       gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    @media (max-width: 1024px) {
+      .portfolio-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 on tablet */
+      }
+    }
+    @media (max-width: 768px) {
+      .portfolio-gallery {
+        grid-template-columns: 1fr; /* 1 on mobile */
+      }
     }
     .portfolio-item {
       position: relative;
@@ -237,8 +249,9 @@
     }
     .portfolio-item img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: 380px;           /* Fixed uniform height */
+      object-fit: cover;       /* Crops perfectly without distortion */
+      object-position: center; /* Keeps the billboard in focus */
       transition: transform 0.6s;
     }
     .portfolio-item:hover img {
@@ -367,7 +380,6 @@
 
   <section class="hero" data-aos="fade-in">
     <div class="hero-content" data-aos="fade-up">
-      <!-- Mini logo removed -->
       <h1>Billboards Done Right</h1>
       <p>Better Rates. Better Reach. Better Results. We're your on-call partner for billboard advertising — local to national, on time, and on budget.</p>
       <a href="/Contact/" class="hero-cta">Launch Your Campaign</a>
@@ -432,25 +444,26 @@
         <h2>Our Impactful Work</h2>
         <p>See real billboard campaigns we've helped execute across major markets</p>
       </div>
-   <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
-  <img src="https://EchelonOutdoors.github.io/Echelon/Floodshots" alt="Community Awareness Billboard Campaign">
-  <div class="portfolio-overlay">
-    <h3>Community Awareness Campaign</h3>
-    <p>Strategic high-visibility placements driving public education, safety initiatives, and community engagement</p>
-  </div>
-</div>
+      <div class="portfolio-gallery">
+        <div class="portfolio-item" data-aos="fade-up">
+          <img src="https://EchelonOutdoors.github.io/Echelon/Floodshots" alt="Community Awareness Billboard Campaign">
+          <div class="portfolio-overlay">
+            <h3>Community Awareness Campaign</h3>
+            <p>Strategic high-visibility placements driving public education, safety initiatives, and community engagement</p>
+          </div>
+        </div>
         <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://szledworld.com/wp-content/uploads/2024/01/OOH-Advertising-Examples-Balenciaga-1024x606.jpg" alt="Fashion Brand Times Square">
+          <img src="https://szledworld.com/wp-content/uploads/2024/01/OOH-Advertising-Examples-Balenciaga-1024x606.jpg" alt="Global Brand Launch in Times Square">
           <div class="portfolio-overlay">
             <h3>Global Brand Launch</h3>
             <p>High-impact creative in the heart of NYC</p>
           </div>
         </div>
         <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://EchelonOutdoors.github.io/Echelon/LIUMHIGHWAY" alt="Highway Billboard">
+          <img src="https://EchelonOutdoors.github.io/Echelon/LIUMHIGHWAY" alt="Highway Billboard Campaign">
           <div class="portfolio-overlay">
             <h3>Highway Dominance</h3>
-            <p>Prime interstate placement at golden hour</p>
+            <p>Prime interstate placement reaching millions of drivers</p>
           </div>
         </div>
       </div>
