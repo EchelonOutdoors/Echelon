@@ -6,40 +6,43 @@
   <title>Echelon Outdoor</title>
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://EchelonOutdoors.github.io/Echelon/NYC.jpg">
 
   <style>
     :root {
-      --charcoal: #1E1E1E;
-      --black: #000000;
-      --white: #FFFFFF;
-      --sand: #C9B28C;
-      --gray: #4A4A4A;
-      --light-gray: #E5E5E5;
+      --ink: #1f2933;
+      --charcoal: #2b2f36;
+      --brand: #7a1f2b;
+      --brand-dark: #5a1620;
+      --accent: #d4b26a;
+      --paper: #f6f4ef;
+      --line: #e3dfd6;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--charcoal);
-      background: var(--white);
+      color: var(--ink);
+      background: var(--paper);
     }
 
+    /* NAV */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: var(--white);
-      border-bottom: 1px solid var(--light-gray);
-      z-index: 1000;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      z-index: 999;
     }
 
     .nav-inner {
       max-width: 1100px;
       margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .nav-inner img {
@@ -47,8 +50,8 @@
     }
 
     #nav-menu {
-      display: flex;
       list-style: none;
+      display: flex;
       gap: 1.5rem;
       margin: 0;
       padding: 0;
@@ -68,27 +71,30 @@
     }
 
     .menu-toggle span {
-      width: 24px;
+      width: 25px;
       height: 3px;
-      background: var(--charcoal);
+      background: var(--brand);
       border-radius: 2px;
     }
 
     @media (max-width: 800px) {
       .menu-toggle { display: flex; }
+
       #nav-menu {
+        display: none;
         position: absolute;
-        top: 60px;
         right: 2rem;
-        background: var(--white);
+        top: 60px;
+        background: var(--paper);
         flex-direction: column;
         padding: 1rem;
-        border: 1px solid var(--light-gray);
-        display: none;
+        border: 1px solid var(--line);
       }
+
       #nav-menu.active { display: flex; }
     }
 
+    /* HERO */
     .hero {
       height: 100vh;
       background: url('https://EchelonOutdoors.github.io/Echelon/NYC.jpg') center/cover no-repeat;
@@ -96,15 +102,16 @@
       align-items: center;
       justify-content: center;
       padding-top: 60px;
+      color: white;
       text-align: center;
-      color: var(--white);
     }
 
-    .hero-overlay {
-      background: rgba(0,0,0,0.6);
+    .hero-overlay-text {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35));
       padding: 2.5rem;
-      border-radius: 12px;
+      border-radius: 14px;
       max-width: 720px;
+      backdrop-filter: blur(2px);
     }
 
     .hero-logo {
@@ -114,18 +121,26 @@
 
     .hero h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       line-height: 1.6;
     }
 
-    .wave-divider svg path {
-      fill: var(--charcoal);
+    /* WAVE */
+    .wave-divider svg {
+      height: 80px;
+      width: 100%;
+      display: block;
     }
 
+    .wave-divider path {
+      fill: var(--brand);
+    }
+
+    /* SECTIONS */
     .section {
       max-width: 1000px;
       margin: auto;
@@ -134,71 +149,89 @@
 
     .section h2 {
       text-align: center;
+      color: var(--brand);
       font-size: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     .deliver-grid,
     .feature-grid {
       display: flex;
-      gap: 3rem;
       justify-content: center;
+      gap: 3rem;
       flex-wrap: wrap;
       text-align: center;
     }
 
     .deliver-item h3,
     .feature-item h3 {
+      color: var(--brand);
       margin-bottom: 0.5rem;
     }
 
-    .deliver-item p,
-    .feature-item p {
-      color: var(--gray);
-      font-size: 0.95rem;
+    .feature-item {
+      max-width: 220px;
     }
 
+    .feature-item img {
+      width: 64px;
+      margin-bottom: 1rem;
+      filter: brightness(0) saturate(100%) invert(22%) sepia(50%) saturate(400%);
+    }
+
+    /* CTA */
     .cta-banner {
-      background: var(--charcoal);
-      color: var(--white);
-      padding: 3rem 1rem;
+      background: var(--brand);
+      color: white;
       text-align: center;
+      padding: 2.5rem 1rem;
     }
 
     .cta-banner a {
-      color: var(--sand);
+      color: var(--accent);
       font-weight: 600;
     }
 
     .cta-banner button {
       margin-top: 1rem;
-      background: var(--sand);
-      color: var(--charcoal);
+      padding: 0.8rem 2.2rem;
+      background: var(--accent);
+      color: var(--brand);
       border: none;
-      padding: 0.75rem 2rem;
       border-radius: 6px;
-      font-weight: 600;
       cursor: pointer;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
     }
 
-    .footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--gray);
-      padding: 2rem;
+    .cta-banner button:hover {
+      background: #caa85f;
     }
 
+    /* STICKY CTA */
     .sticky-call-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: var(--charcoal);
-      color: var(--white);
-      padding: 0.75rem 1.5rem;
+      background: var(--brand);
+      color: white;
+      padding: 0.8rem 1.6rem;
       border-radius: 50px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .sticky-call-button:hover {
+      background: var(--brand-dark);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: #777;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -207,8 +240,10 @@
 
 <nav>
   <div class="nav-inner">
-    <img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg" alt="Echelon Outdoor">
-    <div class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></div>
+    <a href="/"><img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg"></a>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
     <ul id="nav-menu">
       <li><a href="/Services/">Services</a></li>
       <li><a href="/Why-Us/">Why Us</a></li>
@@ -217,61 +252,68 @@
   </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-overlay" data-aos="fade-down">
-    <img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg" class="hero-logo">
-    <h1>High-Impact Billboard Advertising</h1>
-    <p>
-      We place brands in premium, high-visibility locations across key U.S. markets.
-      Strategic placements, transparent pricing, and full campaign management — end to end.
-    </p>
+<div class="hero">
+  <div data-aos="fade-down">
+    <div class="hero-overlay-text">
+      <img class="hero-logo" src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg">
+      <h1>Billboards Done Right</h1>
+      <p>Better rates. Better reach. Better results.<br>
+      Your on-call partner for billboard advertising.</p>
+    </div>
   </div>
+</div>
+
+<div class="wave-divider">
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+    <path d="M0,50 C150,150 350,-50 500,50 L500,150 L0,150 Z"></path>
+  </svg>
+</div>
+
+<section class="cta-banner">
+  <p>Ready to launch your first billboard campaign?</p>
+  <a href="/Contact/"><button>Start Your Campaign</button></a>
 </section>
 
-<section class="cta-banner" data-aos="fade-up">
-  <p>Ready to secure premium billboard placement?</p>
-  <a href="/Contact/"><button>Request Availability</button></a>
-</section>
-
-<section class="section" data-aos="fade-up">
+<section class="section">
   <h2>What We Deliver</h2>
   <div class="deliver-grid">
     <div class="deliver-item">
-      <h3>Placement Strategy</h3>
-      <p>Market-specific recommendations based on traffic patterns and visibility.</p>
+      <h3>Strategic Campaigns</h3>
+      <p>Custom billboard plans aligned to your goals.</p>
     </div>
     <div class="deliver-item">
-      <h3>Premium Inventory</h3>
-      <p>High-impact static and digital boards in proven locations.</p>
+      <h3>Local & National Reach</h3>
+      <p>From Main Street to Times Square.</p>
     </div>
     <div class="deliver-item">
-      <h3>Full Management</h3>
-      <p>Negotiation, posting, reporting — handled start to finish.</p>
+      <h3>Hassle-Free Execution</h3>
+      <p>We handle everything end-to-end.</p>
     </div>
   </div>
 </section>
 
-<section class="section" data-aos="fade-up">
-  <h2>Why Echelon</h2>
+<section class="section">
+  <h2>What Sets Us Apart</h2>
   <div class="feature-grid">
     <div class="feature-item">
-      <h3>Direct Access</h3>
-      <p>No bloated retainers. Direct access to premium inventory.</p>
+      <img src="https://img.icons8.com/ios-filled/64/checkmark.png">
+      <h3>Reliable</h3>
+      <p>On-time, on-budget delivery.</p>
     </div>
     <div class="feature-item">
-      <h3>Transparent Pricing</h3>
-      <p>Clear timelines, clear costs, no surprises.</p>
+      <img src="https://img.icons8.com/ios-filled/64/megaphone.png">
+      <h3>High Visibility</h3>
+      <p>Thousands of impressions daily.</p>
     </div>
     <div class="feature-item">
-      <h3>Senior-Level Attention</h3>
-      <p>Every campaign receives focused, hands-on oversight.</p>
+      <img src="https://img.icons8.com/ios-filled/64/handshake.png">
+      <h3>True Partner</h3>
+      <p>We work as an extension of your team.</p>
     </div>
   </div>
 </section>
 
 <div class="footer">© 2025 Echelon Outdoor</div>
-
-<a href="/Contact/" class="sticky-call-button">Book a Call</a>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -279,6 +321,8 @@
   document.getElementById('menu-toggle').onclick = () =>
     document.getElementById('nav-menu').classList.toggle('active');
 </script>
+
+<a href="/Contact/" class="sticky-call-button">Book a Call</a>
 
 </body>
 </html>
