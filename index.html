@@ -3,93 +3,130 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Echelon Outdoor</title>
+<title>Echelon Outdoor | Premier Billboard Advertising Agency</title>
+<meta name="description" content="Echelon Outdoor: Your trusted partner for high-impact billboard campaigns. Better rates, massive reach, and proven results across local and national markets.">
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-<link rel="preload" as="image" href="https://EchelonOutdoors.github.io/Echelon/NYC.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg-main: #f6f4ef;
-  --bg-dark: #2b2f36;
-  --brand: #7a1f2b;
-  --brand-dark: #5a1620;
-  --accent: #d4b26a;
-  --text-main: #1f2933;
+  --bg-main: #ffffff;
+  --bg-dark: #121618;
+  --brand-primary: #c41e3a; /* Bold red, inspired by iconic OOH brands */
+  --brand-secondary: #1e3a8a; /* Deep blue for trust and professionalism */
+  --accent-gold: #d4af37;
+  --text-main: #1f2937;
+  --text-light: #f3f4f6;
   --text-muted: #6b7280;
-  --border: #e3dfd6;
+  --border-light: #e5e7eb;
 }
 
 /* GLOBAL */
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: var(--bg-main);
   color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-a { color: inherit; }
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+a { color: inherit; text-decoration: none; }
 
 /* NAV */
 nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background: var(--bg-main);
-  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
   z-index: 1000;
+  transition: background 0.3s;
+}
+
+nav.scrolled {
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .nav-inner {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.nav-inner img { height: 40px; }
+.nav-inner img { height: 50px; transition: height 0.3s; }
 
 #nav-menu {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2.5rem;
   margin: 0;
   padding: 0;
 }
 
 #nav-menu a {
-  text-decoration: none;
-  font-weight: 500;
-  color: var(--brand);
+  font-weight: 600;
+  color: var(--text-main);
+  position: relative;
+  transition: color 0.3s;
 }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  cursor: pointer;
+#nav-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background: var(--brand-primary);
+  transition: width 0.3s;
 }
 
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: var(--brand);
+#nav-menu a:hover {
+  color: var(--brand-primary);
 }
 
-@media (max-width: 800px) {
-  .menu-toggle { display: flex; }
+#nav-menu a:hover::after { width: 100%; }
+
+.menu-toggle { display: none; }
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: var(--brand-primary);
+    transition: 0.3s;
+  }
 
   #nav-menu {
     display: none;
     position: absolute;
-    top: 60px;
-    right: 2rem;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
     flex-direction: column;
-    background: var(--bg-main);
-    padding: 1rem;
-    border: 1px solid var(--border);
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
 
   #nav-menu.active { display: flex; }
@@ -98,236 +135,398 @@ nav {
 /* HERO */
 .hero {
   height: 100vh;
-  background: url('https://EchelonOutdoors.github.io/Echelon/NYC.jpg') center/cover no-repeat;
+  min-height: 700px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://EchelonOutdoors.github.io/Echelon/NYC.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 60px;
   text-align: center;
+  position: relative;
 }
 
-.hero-overlay-text {
-  background: linear-gradient(
-    rgba(43,47,54,0.75),
-    rgba(43,47,54,0.55)
-  );
+.hero-content {
+  max-width: 900px;
   color: white;
-  padding: 2.5rem;
-  border-radius: 14px;
-  max-width: 720px;
+  padding: 0 2rem;
 }
 
-.hero-logo {
-  width: 120px;
+.hero-content h1 {
+  font-size: 4.5rem;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.75rem;
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero p {
-  font-size: 1.25rem;
-  line-height: 1.6;
+.hero-cta {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--brand-primary);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: 0.3s;
 }
 
-/* WAVE */
-.wave-divider svg {
-  height: 90px;
-  width: 100%;
-  display: block;
+.hero-cta:hover {
+  background: #a0172c;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(196,30,58,0.4);
 }
 
-.wave-divider path {
-  fill: var(--brand);
+/* SERVICES GRID */
+.services {
+  padding: 6rem 2rem;
+  background: #f8fafc;
 }
 
-/* SECTIONS */
-.section {
-  padding: 4rem 2rem;
-  max-width: 1000px;
+.container {
+  max-width: 1400px;
   margin: auto;
 }
 
-.section h2 {
+.section-header {
   text-align: center;
-  font-size: 2rem;
-  color: var(--brand);
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
 }
 
-.deliver-grid,
-.feature-grid {
-  display: flex;
+.section-header h2 {
+  font-size: 3rem;
+  color: var(--brand-primary);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
-  justify-content: center;
-  flex-wrap: wrap;
+}
+
+.service-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.4s;
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.service-card-content {
+  padding: 2rem;
   text-align: center;
 }
 
-.deliver-item h3,
-.feature-item h3 {
-  color: var(--brand);
-  margin-bottom: 0.5rem;
-}
-
-.deliver-item p,
-.feature-item p {
-  color: var(--text-muted);
-}
-
-/* ICONS */
-.feature-item img {
-  width: 64px;
+.service-card-content h3 {
+  font-size: 1.8rem;
   margin-bottom: 1rem;
-  filter: brightness(0) saturate(100%) invert(25%) sepia(60%) saturate(600%);
+  color: var(--brand-secondary);
 }
 
-/* CTA */
-.cta-banner {
-  background: var(--brand);
+/* PORTFOLIO GALLERY */
+.portfolio {
+  padding: 6rem 2rem;
+  background: var(--bg-main);
+}
+
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  display: flex;
+  align-items: end;
+  padding: 2rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* CTA SECTION */
+.cta-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
   color: white;
   text-align: center;
-  padding: 2.5rem 1rem;
 }
 
-.cta-banner a {
-  color: var(--accent);
-  font-weight: 600;
+.cta-section h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
 }
 
-.cta-banner button {
-  margin-top: 1rem;
-  padding: 0.85rem 2.3rem;
-  background: var(--accent);
-  color: var(--brand-dark);
-  border: none;
-  border-radius: 6px;
+.cta-section p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.cta-button {
+  padding: 1.2rem 3rem;
+  background: var(--accent-gold);
+  color: var(--bg-dark);
   font-weight: 700;
-  letter-spacing: 0.4px;
-  cursor: pointer;
-}
-
-.cta-banner button:hover {
-  background: #caa85f;
-}
-
-/* STICKY CTA */
-.sticky-call-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--brand);
-  color: white;
-  padding: 0.8rem 1.6rem;
   border-radius: 50px;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  font-size: 1.2rem;
+  transition: 0.3s;
 }
 
-.sticky-call-button:hover {
-  background: var(--brand-dark);
+.cta-button:hover {
+  background: #c19a2b;
+  transform: scale(1.05);
 }
 
 /* FOOTER */
 .footer {
   background: var(--bg-dark);
-  color: #cbd5e1;
+  color: var(--text-light);
+  padding: 4rem 2rem 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  max-width: 1400px;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.footer-logo img { height: 60px; margin-bottom: 1rem; }
+
+.footer-links h4 {
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  display: block;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--accent-gold);
+}
+
+.footer-bottom {
   text-align: center;
-  padding: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #374151;
   font-size: 0.9rem;
+}
+
+/* STICKY CTA */
+.sticky-cta {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--brand-primary);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 10px 30px rgba(196,30,58,0.4);
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.sticky-cta:hover {
+  transform: scale(1.1);
+  background: #a0172c;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
+<nav id="navbar">
   <div class="nav-inner">
-    <a href="/"><img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg"></a>
+    <a href="/"><img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg" alt="Echelon Outdoor Logo"></a>
     <div class="menu-toggle" id="menu-toggle">
       <span></span><span></span><span></span>
     </div>
     <ul id="nav-menu">
-      <li><a href="/Services/">Services</a></li>
-      <li><a href="/Why-Us/">Why Us</a></li>
-      <li><a href="/Contact/">Contact</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="hero">
-  <div data-aos="fade-down">
-    <div class="hero-overlay-text">
-      <img class="hero-logo" src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg">
-      <h1>Billboards Done Right</h1>
-      <p>Better rates. Better reach. Better results.<br>Your on-call billboard partner.</p>
-    </div>
-  </div>
-</div>
-
-<div class="wave-divider">
-  <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-    <path d="M0,50 C150,150 350,-50 500,50 L500,150 L0,150 Z"/>
-  </svg>
-</div>
-
-<section class="cta-banner">
-  <p>Ready to launch your first billboard campaign?</p>
-  <a href="/Contact/"><button>Start Your Campaign</button></a>
-</section>
-
-<section class="section">
-  <h2>What We Deliver</h2>
-  <div class="deliver-grid">
-    <div class="deliver-item">
-      <h3>Strategic Campaigns</h3>
-      <p>Custom plans aligned to your business goals.</p>
-    </div>
-    <div class="deliver-item">
-      <h3>Local & National Reach</h3>
-      <p>From Main Street to Times Square.</p>
-    </div>
-    <div class="deliver-item">
-      <h3>Hassle-Free Execution</h3>
-      <p>We manage everything end-to-end.</p>
-    </div>
+<section class="hero" data-aos="fade-in">
+  <div class="hero-content" data-aos="fade-up">
+    <h1>Elevate Your Brand with Unmatched Visibility</h1>
+    <p>Better rates. Unrivaled reach. Measurable results. Your premier partner for billboard and out-of-home advertising campaigns.</p>
+    <a href="/Contact/" class="hero-cta">Launch Your Campaign</a>
   </div>
 </section>
 
-<section class="section">
-  <h2>What Sets Us Apart</h2>
-  <div class="feature-grid">
-    <div class="feature-item">
-      <img src="https://img.icons8.com/ios-filled/64/checkmark.png">
-      <h3>Reliable</h3>
-      <p>On-time and on-budget.</p>
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Our Premium Services</h2>
+      <p>End-to-end solutions designed for maximum impact</p>
     </div>
-    <div class="feature-item">
-      <img src="https://img.icons8.com/ios-filled/64/megaphone.png">
-      <h3>High Visibility</h3>
-      <p>Thousands of impressions daily.</p>
-    </div>
-    <div class="feature-item">
-      <img src="https://img.icons8.com/ios-filled/64/handshake.png">
-      <h3>True Partner</h3>
-      <p>We operate as an extension of your team.</p>
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://via.placeholder.com/600x400?text=Strategic+Billboard+Planning" alt="Strategic Planning">
+        <div class="service-card-content">
+          <h3>Strategic Campaign Planning</h3>
+          <p>Data-driven location selection and custom strategies aligned with your goals.</p>
+        </div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://via.placeholder.com/600x400?text=National+Reach" alt="National Reach">
+        <div class="service-card-content">
+          <h3>Local & National Inventory</h3>
+          <p>Prime locations from bustling city centers to iconic highways.</p>
+        </div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://via.placeholder.com/600x400?text=Hassle-Free+Execution" alt="Execution">
+        <div class="service-card-content">
+          <h3>Full-Service Execution</h3>
+          <p>Creative design, production, installation, and performance reporting.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="footer">© 2025 Echelon Outdoor</div>
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Our Impactful Work</h2>
+      <p>See how we've driven results for brands across industries</p>
+    </div>
+    <div class="portfolio-gallery">
+      <div class="portfolio-item" data-aos="fade-up">
+        <img src="https://via.placeholder.com/800x600?text=Times+Square+Campaign" alt="Times Square Billboard">
+        <div class="portfolio-overlay">
+          <h3>Times Square Spectacular</h3>
+          <p>High-visibility digital takeover for global brand launch</p>
+        </div>
+      </div>
+      <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://via.placeholder.com/800x600?text=Highway+Dominance" alt="Highway Billboards">
+        <div class="portfolio-overlay">
+          <h3>National Highway Campaign</h3>
+          <p>Multi-state rollout generating millions of impressions</p>
+        </div>
+      </div>
+      <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://via.placeholder.com/800x600?text=Local+Market+Domination" alt="Local Billboards">
+        <div class="portfolio-overlay">
+          <h3>Local Market Domination</h3>
+          <p>Targeted placements driving foot traffic and sales</p>
+        </div>
+      </div>
+      <!-- Add more as needed -->
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2>Ready to Dominate the Skyline?</h2>
+    <p>Partner with Echelon Outdoor for billboard campaigns that deliver real results. Get in touch today for a free consultation.</p>
+    <a href="/Contact/" class="cta-button">Book Your Free Consultation</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-logo">
+      <img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg" alt="Echelon Outdoor">
+      <p>Your on-call billboard partner for unbeatable reach and results.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="/Contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fas fa-phone"></i> Call us today</li>
+        <li><i class="fas fa-envelope"></i> info@echelonoutdoor.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Nationwide Service</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Echelon Outdoor. All rights reserved.
+  </div>
+</footer>
+
+<a href="/Contact/" class="sticky-cta"><i class="fas fa-phone-alt"></i></a>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init();
-document.getElementById('menu-toggle').onclick = () =>
-  document.getElementById('nav-menu').classList.toggle('active');
-</script>
+AOS.init({ duration: 1000, once: true });
 
-<a href="/Contact/" class="sticky-call-button">Book a Call</a>
+document.getElementById('menu-toggle').onclick = () => 
+  document.getElementById('nav-menu').classList.toggle('active');
+
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+</script>
 
 </body>
 </html>
