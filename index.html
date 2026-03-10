@@ -4,22 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Echelon Outdoor | Premier Billboard Advertising Agency</title>
-  <meta name="description" content="Echelon Outdoor: Your trusted partner for high-impact billboard campaigns. Better rates, massive reach, and proven results across local and national markets.">
+  <meta name="description" content="Echelon Outdoor: Your trusted partner for high-impact out-of-home advertising. Better rates, massive reach, and proven results across local and national markets.">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --bg-main: #ffffff;
       --bg-dark: #121618;
-      --brand-primary: #c41e3a; /* Bold red */
-      --brand-secondary: #1e3a8a; /* Deep blue */
+      --brand-primary: #c41e3a;
+      --brand-secondary: #1e3a8a;
       --accent-gold: #d4af37;
       --text-main: #1f2937;
       --text-light: #f3f4f6;
       --text-muted: #6b7280;
       --border-light: #e5e7eb;
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -28,11 +34,17 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+
     h1, h2, h3, h4 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
     }
-    a { color: inherit; text-decoration: none; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     /* NAV */
     nav {
       position: fixed;
@@ -42,12 +54,14 @@
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border-light);
       z-index: 1000;
-      transition: background 0.3s;
+      transition: background 0.3s, box-shadow 0.3s;
     }
+
     nav.scrolled {
       background: rgba(255,255,255,0.98);
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
+
     .nav-inner {
       max-width: 1400px;
       margin: auto;
@@ -56,7 +70,12 @@
       align-items: center;
       justify-content: space-between;
     }
-    .nav-inner img { height: 50px; transition: height 0.3s; }
+
+    .nav-inner img {
+      height: 50px;
+      transition: height 0.3s;
+    }
+
     #nav-menu {
       list-style: none;
       display: flex;
@@ -64,12 +83,14 @@
       margin: 0;
       padding: 0;
     }
+
     #nav-menu a {
       font-weight: 600;
       color: var(--text-main);
       position: relative;
       transition: color 0.3s;
     }
+
     #nav-menu a::after {
       content: '';
       position: absolute;
@@ -80,9 +101,19 @@
       background: var(--brand-primary);
       transition: width 0.3s;
     }
-    #nav-menu a:hover { color: var(--brand-primary); }
-    #nav-menu a:hover::after { width: 100%; }
-    .menu-toggle { display: none; }
+
+    #nav-menu a:hover {
+      color: var(--brand-primary);
+    }
+
+    #nav-menu a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
     @media (max-width: 900px) {
       .menu-toggle {
         display: flex;
@@ -90,12 +121,14 @@
         gap: 6px;
         cursor: pointer;
       }
+
       .menu-toggle span {
         width: 30px;
         height: 3px;
         background: var(--brand-primary);
         transition: 0.3s;
       }
+
       #nav-menu {
         display: none;
         position: absolute;
@@ -107,29 +140,38 @@
         padding: 2rem;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       }
-      #nav-menu.active { display: flex; }
+
+      #nav-menu.active {
+        display: flex;
+      }
     }
+
     /* HERO */
     .hero {
       height: 100vh;
       min-height: 700px;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://EchelonOutdoors.github.io/Echelon/NYC.jpg') center/cover no-repeat;
+      background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+        url('https://EchelonOutdoors.github.io/Echelon/NYC.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       position: relative;
     }
+
     .hero-content {
       max-width: 900px;
       color: white;
       padding: 0 2rem;
     }
+
     .hero-content h1 {
       font-size: 4.8rem;
       margin-bottom: 1.5rem;
       line-height: 1.2;
     }
+
     .hero-content p {
       font-size: 1.6rem;
       margin-bottom: 3rem;
@@ -137,6 +179,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .hero-cta {
       display: inline-block;
       padding: 1.2rem 3rem;
@@ -147,33 +190,48 @@
       border-radius: 50px;
       transition: 0.3s;
     }
+
     .hero-cta:hover {
       background: #a0172c;
       transform: translateY(-5px);
       box-shadow: 0 10px 30px rgba(196,30,58,0.4);
     }
-    /* SERVICES GRID */
+
+    /* SERVICES */
     .services {
       padding: 6rem 2rem;
       background: #f8fafc;
     }
+
     .container {
       max-width: 1400px;
       margin: auto;
     }
+
     .section-header {
       text-align: center;
       margin-bottom: 4rem;
     }
+
     .section-header h2 {
       font-size: 3rem;
       color: var(--brand-primary);
+      margin-bottom: 0.75rem;
     }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 3rem;
     }
+
     .service-card {
       background: white;
       border-radius: 16px;
@@ -183,84 +241,115 @@
       text-align: center;
       padding: 3rem 2rem;
     }
+
     .service-card:hover {
       transform: translateY(-15px);
     }
+
     .service-card i {
       font-size: 4rem;
       color: var(--brand-primary);
       margin-bottom: 1.5rem;
     }
+
     .service-card h3 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
       color: var(--brand-secondary);
     }
+
     /* FEATURES */
     .features {
       padding: 6rem 2rem;
       background: var(--bg-main);
     }
+
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 3rem;
     }
+
     .feature-card {
       text-align: center;
     }
+
     .feature-card i {
       font-size: 4rem;
       color: var(--brand-primary);
       margin-bottom: 1.5rem;
     }
+
     .feature-card h3 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
       color: var(--brand-secondary);
     }
-    /* PORTFOLIO - FIXED FOR 3 PER ROW */
+
+    /* PORTFOLIO */
     .portfolio {
       padding: 6rem 2rem;
       background: #f8fafc;
     }
+
     .portfolio-gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       max-width: 1400px;
       margin: 0 auto;
     }
+
     @media (max-width: 1024px) {
       .portfolio-gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 on tablet */
+        grid-template-columns: repeat(2, 1fr);
       }
     }
+
     @media (max-width: 768px) {
       .portfolio-gallery {
-        grid-template-columns: 1fr; /* 1 on mobile */
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+
+      .section-header h2,
+      .cta-section h2 {
+        font-size: 2.2rem;
       }
     }
+
     .portfolio-item {
       position: relative;
       overflow: hidden;
       border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      background: #ddd;
     }
+
     .portfolio-item img {
       width: 100%;
-      height: 380px;           /* Fixed uniform height */
-      object-fit: cover;       /* Crops perfectly without distortion */
-      object-position: center; /* Keeps the billboard in focus */
+      height: 380px;
+      object-fit: cover;
+      object-position: center;
       transition: transform 0.6s;
+      display: block;
     }
+
     .portfolio-item:hover img {
       transform: scale(1.1);
     }
+
     .portfolio-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      background: linear-gradient(transparent, rgba(0,0,0,0.82));
       display: flex;
       flex-direction: column;
       justify-content: end;
@@ -269,9 +358,22 @@
       opacity: 0;
       transition: opacity 0.4s;
     }
+
     .portfolio-item:hover .portfolio-overlay {
       opacity: 1;
     }
+
+    .portfolio-overlay h3 {
+      margin-bottom: 0.7rem;
+      font-size: 1.7rem;
+    }
+
+    .portfolio-overlay p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
     /* CTA SECTION */
     .cta-section {
       padding: 6rem 2rem;
@@ -279,17 +381,21 @@
       color: white;
       text-align: center;
     }
+
     .cta-section h2 {
       font-size: 3rem;
       margin-bottom: 1.5rem;
     }
+
     .cta-section p {
       font-size: 1.3rem;
       max-width: 800px;
       margin: auto;
       margin-bottom: 3rem;
     }
+
     .cta-button {
+      display: inline-block;
       padding: 1.2rem 3rem;
       background: var(--accent-gold);
       color: var(--bg-dark);
@@ -298,16 +404,19 @@
       font-size: 1.2rem;
       transition: 0.3s;
     }
+
     .cta-button:hover {
       background: #c19a2b;
       transform: scale(1.05);
     }
+
     /* FOOTER */
     .footer {
       background: var(--bg-dark);
       color: var(--text-light);
       padding: 4rem 2rem 2rem;
     }
+
     .footer-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -316,29 +425,41 @@
       margin: auto;
       margin-bottom: 3rem;
     }
-    .footer-logo img { height: 60px; margin-bottom: 1rem; }
+
+    .footer-logo img {
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+
     .footer-links h4 {
       color: var(--accent-gold);
       margin-bottom: 1rem;
     }
+
     .footer-links ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
+
+    .footer-links li,
     .footer-links a {
       display: block;
       margin-bottom: 0.8rem;
       transition: color 0.3s;
     }
+
     .footer-links a:hover {
       color: var(--accent-gold);
     }
+
     .footer-bottom {
       text-align: center;
       padding-top: 2rem;
       border-top: 1px solid #374151;
       font-size: 0.9rem;
     }
+
     /* STICKY CTA */
     .sticky-cta {
       position: fixed;
@@ -357,6 +478,7 @@
       z-index: 999;
       transition: 0.3s;
     }
+
     .sticky-cta:hover {
       transform: scale(1.1);
       background: #a0172c;
@@ -367,9 +489,11 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="/"><img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg" alt="Echelon Outdoor Logo"></a>
-      <div class="menu-toggle" id="menu-toggle">
+
+      <div class="menu-toggle" id="menu-toggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </div>
+
       <ul id="nav-menu">
         <li><a href="/Services/">Services</a></li>
         <li><a href="/Why-Us/">Why Us</a></li>
@@ -381,7 +505,7 @@
   <section class="hero" data-aos="fade-in">
     <div class="hero-content" data-aos="fade-up">
       <h1>Billboards Done Right</h1>
-      <p>Better Rates. Better Reach. Better Results. We're your on-call partner for billboard advertising — local to national, on time, and on budget.</p>
+      <p>Better Rates. Better Reach. Better Results. We're your on-call partner for out-of-home advertising — local to national, on time, and on budget.</p>
       <a href="/Contact/" class="hero-cta">Launch Your Campaign</a>
     </div>
   </section>
@@ -390,23 +514,26 @@
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <h2>What We Deliver</h2>
-        <p>End-to-end solutions designed for maximum impact</p>
+        <p>End-to-end out-of-home solutions designed for visibility, scale, and efficiency.</p>
       </div>
+
       <div class="services-grid">
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
           <i class="fas fa-chess-knight"></i>
           <h3>Strategic Campaigns</h3>
-          <p>Custom billboard plans built around your goals and budget.</p>
+          <p>Custom media plans built around your goals, geography, audience, and budget.</p>
         </div>
+
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
           <i class="fas fa-map-marked-alt"></i>
           <h3>Local & National Reach</h3>
-          <p>Prime locations from bustling city centers to iconic highways.</p>
+          <p>Premium placements across major markets, highways, transit corridors, and urban centers.</p>
         </div>
+
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
           <i class="fas fa-tools"></i>
           <h3>Hassle-Free Execution</h3>
-          <p>We manage contracts, production, installation, and performance reporting.</p>
+          <p>We handle planning, vendor coordination, production, installation logistics, and reporting.</p>
         </div>
       </div>
     </div>
@@ -418,21 +545,24 @@
         <h2>What Sets Us Apart</h2>
         <p>Why smart brands choose Echelon Outdoor</p>
       </div>
+
       <div class="features-grid">
         <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
           <i class="fas fa-check-circle"></i>
           <h3>Reliable Service</h3>
-          <p>On-time, on-budget billboard solutions you can count on.</p>
+          <p>On-time, on-budget media execution with a responsive team you can trust.</p>
         </div>
+
         <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
           <i class="fas fa-bullhorn"></i>
           <h3>Maximum Reach</h3>
-          <p>Billboards that put your message in front of millions daily.</p>
+          <p>Out-of-home placements designed to put your brand in front of high-volume daily traffic.</p>
         </div>
+
         <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
           <i class="fas fa-handshake"></i>
           <h3>Personal Partnership</h3>
-          <p>We act as your dedicated on-call partner for marketing success.</p>
+          <p>We operate like an extension of your team, giving you a direct and dedicated media partner.</p>
         </div>
       </div>
     </div>
@@ -441,29 +571,32 @@
   <section class="portfolio">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <h2>Our Impactful Work</h2>
-        <p>See real billboard campaigns we've helped execute across major markets</p>
+        <h2>Advertising Formats We Offer</h2>
+        <p>Explore example placements across transit, roadside, and nationwide out-of-home media.</p>
       </div>
+
       <div class="portfolio-gallery">
         <div class="portfolio-item" data-aos="fade-up">
-          <img src="https://EchelonOutdoors.github.io/Echelon/Floodshots" alt="Community Awareness Billboard Campaign">
+          <img src="https://EchelonOutdoors.github.io/Echelon/your-brand-here-bus-stop.png" alt="Example Bus Stop Advertising Placement">
           <div class="portfolio-overlay">
-            <h3>Community Awareness Campaign</h3>
-            <p>Strategic high-visibility placements driving public education, safety initiatives, and community engagement</p>
+            <h3>Transit Shelter Advertising</h3>
+            <p>Example creative placement demonstrating how brands can capture attention at street level in high-footfall urban environments.</p>
           </div>
         </div>
-  <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-  <img src="https://dolphin-digital.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1690349197344%2Fba29da90-8548-11f0-90d4-7f0ef26d0c7b.jpg&w=1200&q=75" alt="Echelon Outdoor Nationwide Coverage Map">
-  <div class="portfolio-overlay">
-    <h3>Nationwide Coverage</h3>
-    <p>Access to premium billboard inventory in major markets across the US — from coast to coast</p>
-  </div>
-</div>
-        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://EchelonOutdoors.github.io/Echelon/LIUMHIGHWAY" alt="Highway Billboard Campaign">
+
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://dolphin-digital.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1690349197344%2Fba29da90-8548-11f0-90d4-7f0ef26d0c7b.jpg&w=1200&q=75" alt="Echelon Outdoor Nationwide Coverage Map">
           <div class="portfolio-overlay">
-            <h3>Highway Dominance</h3>
-            <p>Prime interstate placement reaching millions of drivers</p>
+            <h3>Nationwide Coverage</h3>
+            <p>Access to premium out-of-home opportunities in major markets across the U.S. — from coast to coast.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://EchelonOutdoors.github.io/Echelon/highway-example-placement.png" alt="Example Highway Billboard Placement">
+          <div class="portfolio-overlay">
+            <h3>Highway Advertising</h3>
+            <p>Example large-format roadside media showcasing the scale and visibility available across major commuter corridors.</p>
           </div>
         </div>
       </div>
@@ -473,7 +606,7 @@
   <section class="cta-section">
     <div class="container">
       <h2>Ready to Dominate the Skyline?</h2>
-      <p>Partner with Echelon Outdoor for billboard campaigns that deliver real results. Get in touch today for a free consultation.</p>
+      <p>Partner with Echelon Outdoor for out-of-home campaigns that deliver real visibility and measurable impact.</p>
       <a href="/Contact/" class="cta-button">Book Your Free Consultation</a>
     </div>
   </section>
@@ -482,8 +615,9 @@
     <div class="container footer-grid">
       <div class="footer-logo">
         <img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg" alt="Echelon Outdoor">
-        <p>Your on-call billboard partner for unbeatable reach and results.</p>
+        <p>Your on-call out-of-home partner for unbeatable reach and results.</p>
       </div>
+
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
@@ -492,6 +626,7 @@
           <li><a href="/Contact/">Contact</a></li>
         </ul>
       </div>
+
       <div class="footer-links">
         <h4>Contact Us</h4>
         <ul>
@@ -501,18 +636,24 @@
         </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
       © 2025 Echelon Outdoor. All rights reserved.
     </div>
   </footer>
 
-  <a href="/Contact/" class="sticky-cta"><i class="fas fa-phone-alt"></i></a>
+  <a href="/Contact/" class="sticky-cta" aria-label="Contact Echelon Outdoor">
+    <i class="fas fa-phone-alt"></i>
+  </a>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
-    document.getElementById('menu-toggle').onclick = () =>
+
+    document.getElementById('menu-toggle').onclick = () => {
       document.getElementById('nav-menu').classList.toggle('active');
+    };
+
     window.addEventListener('scroll', () => {
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
     });
