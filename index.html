@@ -29,10 +29,7 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
     a { color: inherit; text-decoration: none; }
 
     /* NAV */
@@ -206,10 +203,7 @@
       background: #f8fafc;
     }
     .container { max-width: 1400px; margin: auto; }
-    .section-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
+    .section-header { text-align: center; margin-bottom: 4rem; }
     .section-header h2 {
       font-size: 3rem;
       color: var(--brand-primary);
@@ -250,7 +244,7 @@
       color: var(--brand-secondary);
     }
 
-    /* FEATURES / WHY US */
+    /* FEATURES */
     .features {
       padding: 6rem 2rem;
       background: var(--bg-main);
@@ -271,10 +265,7 @@
       justify-content: center;
       margin: 0 auto 1.5rem;
     }
-    .feature-card i {
-      font-size: 2.2rem;
-      color: var(--brand-primary);
-    }
+    .feature-card i { font-size: 2.2rem; color: var(--brand-primary); }
     .feature-card h3 {
       font-size: 1.6rem;
       margin-bottom: 0.75rem;
@@ -347,21 +338,14 @@
       color: white;
       text-align: center;
     }
-    .cta-section h2 {
-      font-size: 3rem;
-      margin-bottom: 1.2rem;
-    }
+    .cta-section h2 { font-size: 3rem; margin-bottom: 1.2rem; }
     .cta-section p {
       font-size: 1.2rem;
       max-width: 720px;
       margin: 0 auto 2rem;
       opacity: 0.92;
     }
-    .cta-note {
-      font-size: 0.9rem;
-      opacity: 0.7;
-      margin-top: 1.5rem;
-    }
+    .cta-note { font-size: 0.9rem; opacity: 0.7; margin-top: 1.5rem; }
     .cta-button {
       display: inline-block;
       padding: 1.2rem 3rem;
@@ -372,10 +356,7 @@
       font-size: 1.1rem;
       transition: 0.3s;
     }
-    .cta-button:hover {
-      background: #c19a2b;
-      transform: scale(1.05);
-    }
+    .cta-button:hover { background: #c19a2b; transform: scale(1.05); }
 
     /* FOOTER */
     .footer {
@@ -428,10 +409,7 @@
       z-index: 999;
       transition: 0.3s;
     }
-    .sticky-cta:hover {
-      transform: scale(1.1);
-      background: #a0172c;
-    }
+    .sticky-cta:hover { transform: scale(1.1); background: #a0172c; }
   </style>
 </head>
 <body>
@@ -450,8 +428,8 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-<section class="hero">
+  <!-- HERO — no data-aos so text is always visible -->
+  <section class="hero">
     <div class="hero-content">
       <span class="hero-eyebrow">Out-of-Home Advertising</span>
       <h1>Put Your Brand Where People Can't Scroll Past It</h1>
@@ -479,7 +457,7 @@
         <span class="stat-number">1</span>
         <span class="stat-label">Point of Contact for Everything</span>
       </div>
-      <p style="text-align:center; color:#6b7280; font-size:0.75rem; max-width:1400px; margin: 1rem auto 0;">*OOH industry average. Individual results vary by campaign, format, and market.</p>
+      <p style="text-align:center;color:#6b7280;font-size:0.75rem;width:100%;margin:1rem 0 0;">*OOH industry average. Individual results vary by campaign, format, and market.</p>
     </div>
   </div>
 
@@ -495,4 +473,160 @@
           <i class="fas fa-chess-knight"></i>
           <h3>Strategic Media Planning</h3>
           <p>We build custom media plans around your goals, market, audience, and budget — not around what inventory happens to be available. Every placement has a reason.</p>
-        </div
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-map-marked-alt"></i>
+          <h3>Local & National Reach</h3>
+          <p>From a single high-impact market entry to a multi-city rollout, we have vendor relationships and market knowledge across the U.S. to move fast and execute clean.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-tools"></i>
+          <h3>Full-Service Execution</h3>
+          <p>Vendor coordination, production, installation logistics, and campaign reporting — all handled under one roof. No chasing down five different reps to get one campaign live.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Why Brands Choose Echelon</h2>
+        <p>We're not a media directory. We're a strategic execution partner — and there's a real difference.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon-wrap">
+            <i class="fas fa-crosshairs"></i>
+          </div>
+          <h3>Right Inventory, Not Just Available Inventory</h3>
+          <p>We don't just book whatever's open. We identify high-value placements that match your market, audience, and budget — then negotiate on your behalf to get the best terms.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon-wrap">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3>One Partner Across Every Format</h3>
+          <p>Airports, billboards, transit, street-level, mobile LED, mall — we handle all of it under one roof. No need to manage multiple vendor relationships or coordinate across different timelines.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon-wrap">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Start Small. Scale Smart.</h3>
+          <p>Not ready to go all-in? Start with a focused test campaign to establish a baseline, measure impact, and build confidence. We design campaigns that can grow as you do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATS -->
+  <section class="portfolio">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Advertising Formats We Execute</h2>
+        <p>We plan and place campaigns across every major OOH format — airports, transit, highway, street-level, retail, and mobile — anywhere in the U.S.</p>
+      </div>
+      <div class="portfolio-gallery">
+        <div class="portfolio-item" data-aos="fade-up">
+          <img src="https://EchelonOutdoors.github.io/Echelon/your-brand-here-bus-stop.png" alt="Transit Shelter Advertising">
+          <div class="portfolio-overlay">
+            <h3>Street Level Advertising</h3>
+            <p>Transit shelters and pedestrian placements capturing attention in high-footfall urban environments.</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="AirportAdvertising.png" alt="Airport Advertising">
+          <div class="portfolio-overlay">
+            <h3>Airport Advertising</h3>
+            <p>High-impact terminal placements reaching affluent travelers and business audiences with high dwell time.</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="Mobile.png" alt="Mobile Billboard Advertising">
+          <div class="portfolio-overlay">
+            <h3>Mobile LED Billboard Advertising</h3>
+            <p>Digital billboard trucks dominating events, nightlife districts, and major urban traffic zones.</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+          <img src="SubwayAd.png" alt="Subway Advertising">
+          <div class="portfolio-overlay">
+            <h3>Subway & Metro Advertising</h3>
+            <p>Platform dominations, station takeovers, and train interior ads reaching millions of daily commuters.</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
+          <img src="HighwayBillboard.png" alt="Highway Billboard Advertising">
+          <div class="portfolio-overlay">
+            <h3>Highway Billboard Advertising</h3>
+            <p>Large-format roadside billboards capturing massive commuter traffic across major highways.</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="500">
+          <img src="MallAd.png" alt="Mall Advertising">
+          <div class="portfolio-overlay">
+            <h3>Mall & Retail Advertising</h3>
+            <p>Digital screens and experiential placements inside premium shopping destinations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Let's Build Your Campaign</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Whether you have a clear vision or just a budget and a market, we'll put together a plan that makes sense. No fluff, no lock-in — just smart placements and clean execution.</p>
+      <a href="/Contact/" class="cta-button" data-aos="fade-up" data-aos-delay="200">Get Your Free Media Plan</a>
+      <p class="cta-note" data-aos="fade-up" data-aos-delay="300">No minimum spend required. Starter campaigns available from $2,500/month.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-logo">
+        <img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.png" alt="Echelon Outdoor">
+        <p>Your on-call out-of-home partner. We make OOH simpler, more strategic, and more accessible — for brands at every stage.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/Services/">Services</a></li>
+          <li><a href="/Why-Us/">Why Us</a></li>
+          <li><a href="/Contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> (305) 771-5230</li>
+          <li><i class="fas fa-envelope"></i> info@echelonoutdoor.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Nationwide Campaign Execution</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Echelon Outdoor. All rights reserved.
+    </div>
+  </footer>
+
+  <a href="/Contact/" class="sticky-cta" aria-label="Contact Echelon Outdoor">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    document.getElementById('menu-toggle').onclick = () => {
+      document.getElementById('nav-menu').classList.toggle('active');
+    };
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
