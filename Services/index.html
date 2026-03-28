@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | Echelon Outdoor</title>
-  <meta name="description" content="Explore Echelon Outdoor's premium billboard services: strategic planning, local & national inventory, and full-service execution for maximum impact.">
+  <title>OOH Advertising Services | Echelon Outdoor</title>
+  <meta name="description" content="Echelon Outdoor executes campaigns across airports, billboards, transit, mobile LED, street-level, and mall advertising — nationwide. Full-service from strategy to launch.">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -12,15 +12,15 @@
     :root {
       --bg-main: #ffffff;
       --bg-dark: #121618;
-      --brand-primary: #c41e3a; /* Bold red */
-      --brand-secondary: #1e3a8a; /* Deep blue */
+      --brand-primary: #c41e3a;
+      --brand-secondary: #1e3a8a;
       --accent-gold: #d4af37;
       --text-main: #1f2937;
       --text-light: #f3f4f6;
       --text-muted: #6b7280;
       --border-light: #e5e7eb;
     }
-    /* GLOBAL */
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -29,11 +29,9 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
     a { color: inherit; text-decoration: none; }
+
     /* NAV */
     nav {
       position: fixed;
@@ -81,24 +79,12 @@
       background: var(--brand-primary);
       transition: width 0.3s;
     }
-    #nav-menu a:hover {
-      color: var(--brand-primary);
-    }
+    #nav-menu a:hover { color: var(--brand-primary); }
     #nav-menu a:hover::after { width: 100%; }
     .menu-toggle { display: none; }
     @media (max-width: 900px) {
-      .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        cursor: pointer;
-      }
-      .menu-toggle span {
-        width: 30px;
-        height: 3px;
-        background: var(--brand-primary);
-        transition: 0.3s;
-      }
+      .menu-toggle { display: flex; flex-direction: column; gap: 6px; cursor: pointer; }
+      .menu-toggle span { width: 30px; height: 3px; background: var(--brand-primary); }
       #nav-menu {
         display: none;
         position: absolute;
@@ -112,110 +98,135 @@
       }
       #nav-menu.active { display: flex; }
     }
-    /* HERO for Services Page */
+
+    /* HERO — no data-aos so text is always visible */
     .services-hero {
       height: 70vh;
-      min-height: 600px;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://EchelonOutdoors.github.io/Echelon/NYC.jpg') center/cover no-repeat;
+      min-height: 550px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+        url('https://EchelonOutdoors.github.io/Echelon/NYC.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      position: relative;
     }
     .services-hero-content {
       max-width: 900px;
       color: white;
       padding: 0 2rem;
     }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 1.2rem;
+    }
     .services-hero-content h1 {
       font-size: 4rem;
       margin-bottom: 1rem;
+      line-height: 1.15;
     }
     .services-hero-content p {
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       max-width: 700px;
-      margin: 0 auto 2.5rem;
+      margin: 0 auto;
+      opacity: 0.92;
     }
-    /* SERVICES SECTION */
+
+    /* FORMAT CARDS */
     .services-main {
       padding: 6rem 2rem;
       background: #f8fafc;
     }
-    .container {
-      max-width: 1400px;
-      margin: auto;
-    }
-    .section-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
+    .container { max-width: 1400px; margin: auto; }
+    .section-header { text-align: center; margin-bottom: 4rem; }
     .section-header h2 {
       font-size: 3rem;
       color: var(--brand-primary);
+      margin-bottom: 0.75rem;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 760px;
+      margin: 0 auto;
     }
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 3rem;
-      margin-bottom: 6rem;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
     }
     .service-card {
       background: white;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      transition: transform 0.4s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.4s, box-shadow 0.4s;
       text-align: center;
       padding: 3rem 2rem;
     }
     .service-card:hover {
-      transform: translateY(-15px);
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.14);
     }
-    .service-card i {
-      font-size: 4rem;
-      color: var(--brand-primary);
-      margin-bottom: 1.5rem;
+    .service-icon-wrap {
+      width: 80px;
+      height: 80px;
+      background: #fef2f4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
     }
+    .service-card i { font-size: 2.2rem; color: var(--brand-primary); }
     .service-card h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
       color: var(--brand-secondary);
     }
+    .service-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+
     /* HOW IT WORKS */
     .how-it-works {
       padding: 6rem 2rem;
       background: var(--bg-main);
     }
     .steps-container {
-      max-width: 900px;
+      max-width: 860px;
       margin: auto;
       display: grid;
-      gap: 3rem;
+      gap: 2.5rem;
     }
     .step {
       display: grid;
-      grid-template-columns: 60px 1fr;
+      grid-template-columns: 64px 1fr;
       gap: 2rem;
       align-items: start;
     }
     .step-number {
-      width: 60px;
-      height: 60px;
+      width: 64px;
+      height: 64px;
       background: var(--brand-primary);
       color: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 700;
+      flex-shrink: 0;
     }
     .step h3 {
-      font-size: 1.8rem;
-      margin: 0 0 1rem;
+      font-size: 1.6rem;
+      margin: 0 0 0.75rem;
       color: var(--brand-secondary);
     }
+    .step p { color: var(--text-muted); margin: 0; }
+
     /* MARKETS */
     .markets-section {
       padding: 6rem 2rem;
@@ -229,6 +240,8 @@
       gap: 1rem;
       max-width: 1000px;
       margin: 3rem auto 0;
+      list-style: none;
+      padding: 0;
     }
     .markets-list li {
       background: white;
@@ -236,9 +249,38 @@
       padding: 0.8rem 1.5rem;
       border-radius: 50px;
       font-weight: 600;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      font-size: 0.95rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
     }
-    /* FOOTER & STICKY CTA */
+
+    /* CTA */
+    .cta-section {
+      padding: 7rem 2rem;
+      background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+      color: white;
+      text-align: center;
+    }
+    .cta-section h2 { font-size: 3rem; margin-bottom: 1.2rem; }
+    .cta-section p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: 0 auto 2rem;
+      opacity: 0.92;
+    }
+    .cta-note { font-size: 0.9rem; opacity: 0.7; margin-top: 1.5rem; }
+    .cta-button {
+      display: inline-block;
+      padding: 1.2rem 3rem;
+      background: var(--accent-gold);
+      color: var(--bg-dark);
+      font-weight: 700;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    .cta-button:hover { background: #c19a2b; transform: scale(1.05); }
+
+    /* FOOTER */
     .footer {
       background: var(--bg-dark);
       color: var(--text-light);
@@ -253,27 +295,22 @@
       margin-bottom: 3rem;
     }
     .footer-logo img { height: 60px; margin-bottom: 1rem; }
-    .footer-links h4 {
-      color: var(--accent-gold);
-      margin-bottom: 1rem;
-    }
-    .footer-links ul {
-      list-style: none;
-      padding: 0;
-    }
-    .footer-links a {
+    .footer-logo p { color: #9ca3af; font-size: 0.95rem; line-height: 1.7; }
+    .footer-links h4 { color: var(--accent-gold); margin-bottom: 1rem; }
+    .footer-links ul { list-style: none; padding: 0; margin: 0; }
+    .footer-links li, .footer-links a {
       display: block;
       margin-bottom: 0.8rem;
       transition: color 0.3s;
+      color: #9ca3af;
     }
-    .footer-links a:hover {
-      color: var(--accent-gold);
-    }
+    .footer-links a:hover { color: var(--accent-gold); }
     .footer-bottom {
       text-align: center;
       padding-top: 2rem;
       border-top: 1px solid #374151;
       font-size: 0.9rem;
+      color: #6b7280;
     }
     .sticky-cta {
       position: fixed;
@@ -292,13 +329,19 @@
       z-index: 999;
       transition: 0.3s;
     }
-    .sticky-cta:hover {
-      transform: scale(1.1);
-      background: #a0172c;
+    .sticky-cta:hover { transform: scale(1.1); background: #a0172c; }
+
+    @media (max-width: 768px) {
+      .services-hero-content h1 { font-size: 2.8rem; }
+      .services-hero-content p { font-size: 1.1rem; }
+      .section-header h2 { font-size: 2.2rem; }
+      .step { grid-template-columns: 1fr; }
+      .step-number { margin-bottom: 0.5rem; }
     }
   </style>
 </head>
 <body>
+
   <nav id="navbar">
     <div class="nav-inner">
       <a href="/"><img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.png" alt="Echelon Outdoor Logo"></a>
@@ -313,97 +356,136 @@
     </div>
   </nav>
 
-  <section class="services-hero" data-aos="fade-in">
-    <div class="services-hero-content" data-aos="fade-up">
-      <h1>Our Premium Services</h1>
-      <p>From strategy to signage, we help you launch billboard campaigns that hit your goals — not just the road.</p>
+  <!-- HERO — no data-aos so text is always visible -->
+  <section class="services-hero">
+    <div class="services-hero-content">
+      <span class="hero-eyebrow">What We Execute</span>
+      <h1>Every Format. Every Market. One Partner.</h1>
+      <p>We plan and execute OOH campaigns across every major format — from airports and highway billboards to mobile LED trucks and subway systems — anywhere in the U.S.</p>
     </div>
   </section>
 
+  <!-- FORMAT CARDS -->
   <section class="services-main">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <h2>Comprehensive Solutions</h2>
-        <p>End-to-end billboard services designed for maximum impact</p>
+        <h2>Advertising Formats We Offer</h2>
+        <p>Not every format fits every brand or market. We help you figure out what's right — then execute it end to end.</p>
       </div>
       <div class="services-grid">
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-map-marked-alt"></i>
-          <h3>Billboard Placement</h3>
-          <p>Prime local and national outdoor inventory tailored to your audience and goals.</p>
+          <div class="service-icon-wrap"><i class="fas fa-plane-departure"></i></div>
+          <h3>Airport Advertising</h3>
+          <p>High-dwell-time terminal placements reaching business travelers, frequent flyers, and affluent audiences. Strong QR engagement potential and one of the highest impression-to-CPM ratios in OOH.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <i class="fas fa-chess-knight"></i>
-          <h3>Campaign Strategy</h3>
-          <p>Data-backed targeting, planning, and optimization to maximize your ROI.</p>
+          <div class="service-icon-wrap"><i class="fas fa-road"></i></div>
+          <h3>Highway Billboard Advertising</h3>
+          <p>Large-format roadside boards capturing massive commuter traffic on major interstates and corridors. Built for awareness at scale and consistent daily impressions across your target market.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <i class="fas fa-palette"></i>
-          <h3>Creative Support</h3>
-          <p>Professional billboard designs that stop traffic and drive real action.</p>
+          <div class="service-icon-wrap"><i class="fas fa-subway"></i></div>
+          <h3>Subway & Metro Advertising</h3>
+          <p>Platform dominations, station takeovers, and train interior placements reaching millions of daily commuters in captive, high-frequency environments. Ideal for urban market penetration.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon-wrap"><i class="fas fa-walking"></i></div>
+          <h3>Street Level Advertising</h3>
+          <p>Transit shelter and pedestrian placements in high-footfall urban corridors. Hyper-local targeting for neighborhood-level reach — strong for retail, events, and local brand awareness.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon-wrap"><i class="fas fa-truck"></i></div>
+          <h3>Mobile LED Billboard Trucks</h3>
+          <p>Digital billboard trucks that go where your audience is — events, nightlife districts, conference zones, and high-traffic urban areas. Maximum impact for launches, activations, and stunts.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-icon-wrap"><i class="fas fa-shopping-bag"></i></div>
+          <h3>Mall & Retail Advertising</h3>
+          <p>Digital screens and experiential placements inside premium shopping destinations. Reaches consumers in a buying mindset with strong dwell time and repeated exposure throughout a visit.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- HOW IT WORKS -->
   <section class="how-it-works">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <h2>How It Works</h2>
-        <p>Simple, transparent process from start to launch</p>
+        <p>From your first conversation to campaign launch — here's what working with us actually looks like.</p>
       </div>
       <div class="steps-container">
         <div class="step" data-aos="fade-up" data-aos-delay="100">
           <div class="step-number">1</div>
           <div>
-            <h3>Discovery</h3>
-            <p>Tell us your goals, audience, and budget. We'll guide you on what works best for your market and message.</p>
+            <h3>Tell Us Your Goals</h3>
+            <p>Share your market, audience, timeline, and budget — even a rough one. We'll ask the right questions and tell you what formats and placements make the most sense for what you're trying to do.</p>
           </div>
         </div>
         <div class="step" data-aos="fade-up" data-aos-delay="200">
           <div class="step-number">2</div>
           <div>
-            <h3>Proposal</h3>
-            <p>We present tailored billboard location options, clear pricing, and timelines — fully transparent.</p>
+            <h3>We Build Your Media Plan</h3>
+            <p>We identify the best inventory, negotiate with our vendor partners, and put together a clear proposal with placements, pricing, impressions, and timelines. No fluff — just what you need to make a decision.</p>
           </div>
         </div>
         <div class="step" data-aos="fade-up" data-aos-delay="300">
           <div class="step-number">3</div>
           <div>
-            <h3>Go Live</h3>
-            <p>We handle contracts, production, and installation. Your campaign launches smoothly while you focus on results.</p>
+            <h3>We Handle Everything Else</h3>
+            <p>Once you're in, we manage contracts, production coordination, installation logistics, and launch confirmation. Your campaign goes live while you stay focused on the business.</p>
+          </div>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-delay="400">
+          <div class="step-number">4</div>
+          <div>
+            <h3>Scale When You're Ready</h3>
+            <p>Start with one market or one format. Once you see it working, we make it easy to expand — more markets, more formats, longer runs. We build campaigns designed to grow.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- MARKETS -->
   <section class="markets-section">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <h2>Markets We Serve</h2>
-        <p>We operate in key cities and regions nationwide to maximize your campaign's reach and impact.</p>
+        <h2>Markets We Cover</h2>
+        <p>We have inventory access and vendor relationships across major U.S. markets — and can source placements in most cities on request.</p>
       </div>
       <ul class="markets-list" data-aos="fade-up" data-aos-delay="100">
-        <li>Miami</li><li>Hoboken</li><li>Boston</li><li>NYC</li><li>Chicago</li><li>Baltimore</li><li>San Francisco</li>
-        <li>Los Angeles</li><li>Orlando</li><li>Raleigh</li><li>Austin</li><li>Houston</li><li>Dallas</li><li>Charlotte</li>
-        <li>Denver</li><li>Colorado</li><li>San Diego</li><li>Phoenix</li><li>Seattle</li><li>Atlanta</li><li>Fort Lauderdale</li>
-        <li>Salt Lake City</li><li>Tampa</li><li>Naples</li>
+        <li>Miami</li><li>New York City</li><li>Los Angeles</li><li>Chicago</li><li>San Francisco</li>
+        <li>Atlanta</li><li>Austin</li><li>Boston</li><li>Dallas</li><li>Houston</li>
+        <li>Seattle</li><li>Denver</li><li>Phoenix</li><li>San Diego</li><li>Orlando</li>
+        <li>Raleigh</li><li>Charlotte</li><li>Tampa</li><li>Fort Lauderdale</li><li>Baltimore</li>
+        <li>Nashville</li><li>Salt Lake City</li><li>Naples</li><li>+ More on Request</li>
       </ul>
     </div>
   </section>
 
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Ready to Get Started?</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Tell us your market and budget and we'll put together a media plan that makes sense. No commitment required to see options.</p>
+      <a href="/Contact/" class="cta-button" data-aos="fade-up" data-aos-delay="200">Get Your Free Media Plan</a>
+      <p class="cta-note" data-aos="fade-up" data-aos-delay="300">No minimum spend required. Starter campaigns available from $2,500/month.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-logo">
         <img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.png" alt="Echelon Outdoor">
-        <p>Your on-call billboard partner for unbeatable reach and results.</p>
+        <p>Your on-call out-of-home partner. We make OOH simpler, more strategic, and more accessible — for brands at every stage.</p>
       </div>
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="/Why-Us/">Why Us</a></li>
           <li><a href="/Contact/">Contact</a></li>
         </ul>
       </div>
@@ -412,16 +494,18 @@
         <ul>
           <li><i class="fas fa-phone"></i> (305) 771-5230</li>
           <li><i class="fas fa-envelope"></i> info@echelonoutdoor.com</li>
-          <li><i class="fas fa-map-marker-alt"></i> Nationwide Service</li>
+          <li><i class="fas fa-map-marker-alt"></i> Nationwide Campaign Execution</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      © 2025 Echelon Outdoor. All rights reserved.
+      © 2026 Echelon Outdoor. All rights reserved.
     </div>
   </footer>
 
-  <a href="/Contact/" class="sticky-cta"><i class="fas fa-phone-alt"></i></a>
+  <a href="/Contact/" class="sticky-cta" aria-label="Contact Echelon Outdoor">
+    <i class="fas fa-phone-alt"></i>
+  </a>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
