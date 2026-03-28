@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us | Echelon Outdoor</title>
-  <meta name="description" content="Get in touch with Echelon Outdoor for billboard advertising campaigns. Better rates, massive reach, and proven results.">
+  <meta name="description" content="Ready to launch an OOH campaign? Contact Echelon Outdoor for a free media plan — airports, billboards, transit, mobile, and more nationwide.">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -12,15 +12,15 @@
     :root {
       --bg-main: #ffffff;
       --bg-dark: #121618;
-      --brand-primary: #c41e3a; /* Bold red */
-      --brand-secondary: #1e3a8a; /* Deep blue */
+      --brand-primary: #c41e3a;
+      --brand-secondary: #1e3a8a;
       --accent-gold: #d4af37;
       --text-main: #1f2937;
       --text-light: #f3f4f6;
       --text-muted: #6b7280;
       --border-light: #e5e7eb;
     }
-    /* GLOBAL */
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -29,11 +29,9 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
     a { color: inherit; text-decoration: none; }
+
     /* NAV */
     nav {
       position: fixed;
@@ -81,24 +79,12 @@
       background: var(--brand-primary);
       transition: width 0.3s;
     }
-    #nav-menu a:hover {
-      color: var(--brand-primary);
-    }
+    #nav-menu a:hover { color: var(--brand-primary); }
     #nav-menu a:hover::after { width: 100%; }
     .menu-toggle { display: none; }
     @media (max-width: 900px) {
-      .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        cursor: pointer;
-      }
-      .menu-toggle span {
-        width: 30px;
-        height: 3px;
-        background: var(--brand-primary);
-        transition: 0.3s;
-      }
+      .menu-toggle { display: flex; flex-direction: column; gap: 6px; cursor: pointer; }
+      .menu-toggle span { width: 30px; height: 3px; background: var(--brand-primary); }
       #nav-menu {
         display: none;
         position: absolute;
@@ -112,87 +98,159 @@
       }
       #nav-menu.active { display: flex; }
     }
-    /* HERO for Contact Page */
+
+    /* HERO — no data-aos so text is always visible */
     .contact-hero {
       height: 70vh;
-      min-height: 600px;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://EchelonOutdoors.github.io/Echelon/NYC.jpg') center/cover no-repeat;
+      min-height: 550px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+        url('https://EchelonOutdoors.github.io/Echelon/NYC.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      position: relative;
     }
     .contact-hero-content {
       max-width: 900px;
       color: white;
       padding: 0 2rem;
     }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 1.2rem;
+    }
     .contact-hero-content h1 {
       font-size: 4rem;
       margin-bottom: 1rem;
+      line-height: 1.15;
     }
     .contact-hero-content p {
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       max-width: 700px;
-      margin: 0 auto 2.5rem;
+      margin: 0 auto;
+      opacity: 0.92;
     }
+
     /* CONTACT SECTION */
     .contact-section {
       padding: 6rem 2rem;
       background: #f8fafc;
     }
-    .container {
-      max-width: 1400px;
-      margin: auto;
-    }
-    .section-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
+    .container { max-width: 1400px; margin: auto; }
+    .section-header { text-align: center; margin-bottom: 4rem; }
     .section-header h2 {
       font-size: 3rem;
       color: var(--brand-primary);
+      margin-bottom: 0.75rem;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
     }
     .contact-card {
       background: white;
       border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      transition: transform 0.4s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.4s, box-shadow 0.4s;
       text-align: center;
       padding: 2.5rem 2rem;
     }
     .contact-card:hover {
-      transform: translateY(-15px);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
     }
-    .contact-card i {
-      font-size: 3rem;
-      color: var(--brand-primary);
-      margin-bottom: 1.5rem;
+    .contact-icon-wrap {
+      width: 72px;
+      height: 72px;
+      background: #fef2f4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
     }
+    .contact-card i { font-size: 2rem; color: var(--brand-primary); }
     .contact-card h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
       color: var(--brand-secondary);
     }
+    .contact-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0; }
     .contact-card a {
-      display: block;
-      font-size: 1.3rem;
-      font-weight: 600;
+      display: inline-block;
+      font-size: 1.05rem;
+      font-weight: 700;
       color: var(--brand-primary);
-      margin-top: 1rem;
+      margin-top: 1.2rem;
       word-break: break-word;
+      transition: opacity 0.2s;
     }
-    .contact-card a:hover {
-      text-decoration: underline;
+    .contact-card a:hover { opacity: 0.75; }
+
+    /* WHAT TO EXPECT */
+    .expect-section {
+      padding: 6rem 2rem;
+      background: var(--bg-main);
     }
-    /* FOOTER & STICKY CTA (same as home) */
+    .expect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .expect-item {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .expect-num {
+      width: 48px;
+      height: 48px;
+      background: var(--brand-primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .expect-item h4 {
+      font-size: 1.1rem;
+      margin: 0 0 0.4rem;
+      color: var(--brand-secondary);
+    }
+    .expect-item p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+
+    /* HIRING NOTE */
+    .hiring-note {
+      text-align: center;
+      padding: 2rem;
+      background: #f8fafc;
+      border-top: 1px solid var(--border-light);
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .hiring-note a { color: var(--brand-primary); font-weight: 600; }
+    .hiring-note a:hover { text-decoration: underline; }
+
+    /* FOOTER */
     .footer {
       background: var(--bg-dark);
       color: var(--text-light);
@@ -207,27 +265,22 @@
       margin-bottom: 3rem;
     }
     .footer-logo img { height: 60px; margin-bottom: 1rem; }
-    .footer-links h4 {
-      color: var(--accent-gold);
-      margin-bottom: 1rem;
-    }
-    .footer-links ul {
-      list-style: none;
-      padding: 0;
-    }
-    .footer-links a {
+    .footer-logo p { color: #9ca3af; font-size: 0.95rem; line-height: 1.7; }
+    .footer-links h4 { color: var(--accent-gold); margin-bottom: 1rem; }
+    .footer-links ul { list-style: none; padding: 0; margin: 0; }
+    .footer-links li, .footer-links a {
       display: block;
       margin-bottom: 0.8rem;
       transition: color 0.3s;
+      color: #9ca3af;
     }
-    .footer-links a:hover {
-      color: var(--accent-gold);
-    }
+    .footer-links a:hover { color: var(--accent-gold); }
     .footer-bottom {
       text-align: center;
       padding-top: 2rem;
       border-top: 1px solid #374151;
       font-size: 0.9rem;
+      color: #6b7280;
     }
     .sticky-cta {
       position: fixed;
@@ -246,13 +299,17 @@
       z-index: 999;
       transition: 0.3s;
     }
-    .sticky-cta:hover {
-      transform: scale(1.1);
-      background: #a0172c;
+    .sticky-cta:hover { transform: scale(1.1); background: #a0172c; }
+
+    @media (max-width: 768px) {
+      .contact-hero-content h1 { font-size: 2.8rem; }
+      .contact-hero-content p { font-size: 1.1rem; }
+      .section-header h2 { font-size: 2.2rem; }
     }
   </style>
 </head>
 <body>
+
   <nav id="navbar">
     <div class="nav-inner">
       <a href="/"><img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.png" alt="Echelon Outdoor Logo"></a>
@@ -262,71 +319,122 @@
       <ul id="nav-menu">
         <li><a href="/">Home</a></li>
         <li><a href="/Services/">Services</a></li>
-        <li><a href="/Contact/">Contact</a></li>
+        <li><a href="/Why-Us/">Why Us</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="contact-hero" data-aos="fade-in">
-    <div class="contact-hero-content" data-aos="fade-up">
-      <h1>Let’s Talk Billboards</h1>
-      <p>Whether you’re ready to launch a campaign or just exploring options, we’re here to help. Reach out today — fast responses guaranteed.</p>
+  <!-- HERO — no data-aos so text is always visible -->
+  <section class="contact-hero">
+    <div class="contact-hero-content">
+      <span class="hero-eyebrow">Get in Touch</span>
+      <h1>Let's Build Your Campaign</h1>
+      <p>Have a market in mind? A budget? Just a question? Reach out and we'll get back to you fast with real options — no fluff, no hard sell.</p>
     </div>
   </section>
 
+  <!-- CONTACT CARDS -->
   <section class="contact-section">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <h2>Get in Touch</h2>
-        <p>Choose the best way to connect with our team</p>
+        <h2>Reach Out</h2>
+        <p>Pick whatever's easiest. We respond quickly and come prepared.</p>
       </div>
       <div class="contact-grid">
         <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-phone-alt"></i>
+          <div class="contact-icon-wrap">
+            <i class="fas fa-phone-alt"></i>
+          </div>
           <h3>Call Us</h3>
-          <p>Questions or ready to start? Speak directly with our team — available 24/7.</p>
+          <p>Want to talk through your market, budget, or format options? Call us directly — fastest way to get a real answer.</p>
           <a href="tel:3057715230">(305) 771-5230</a>
         </div>
         <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
-          <i class="fas fa-envelope"></i>
-          <h3>General Inquiries</h3>
-          <p>For questions about how we work or general information.</p>
-          <a href="mailto:info@echelonoutdoor.com">info@echelonoutdoor.com</a>
-        </div>
-        <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
-          <i class="fas fa-chart-line"></i>
-          <h3>Sales & Campaigns</h3>
-          <p>Ready to launch or optimize a billboard campaign? Let’s build your plan.</p>
+          <div class="contact-icon-wrap">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Campaign Inquiries</h3>
+          <p>Ready to launch or want to see what a campaign could look like for your brand? Start here and we'll send a plan.</p>
           <a href="mailto:sales@echelonoutdoor.com">sales@echelonoutdoor.com</a>
         </div>
-        <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
-          <i class="fas fa-handshake"></i>
-          <h3>Management & Partnerships</h3>
-          <p>Interested in long-term collaboration or management opportunities?</p>
-          <a href="mailto:management@echelonoutdoor.com">management@echelonoutdoor.com</a>
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="contact-icon-wrap">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>General Questions</h3>
+          <p>Not sure where to start? Send us a message with whatever you're thinking and we'll point you in the right direction.</p>
+          <a href="mailto:info@echelonoutdoor.com">info@echelonoutdoor.com</a>
         </div>
-        <div class="contact-card" data-aos="fade-up" data-aos-delay="500">
-          <i class="fas fa-rocket"></i>
-          <h3>We're Hiring!</h3>
-          <p>Join our growing team — send your resume and a quick note.</p>
-          <a href="mailto:hiring@echelonoutdoor.com">hiring@echelonoutdoor.com</a>
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="contact-icon-wrap">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Partnerships</h3>
+          <p>Agency partnerships, vendor relationships, or long-term collaboration — reach out and let's talk about what makes sense.</p>
+          <a href="mailto:management@echelonoutdoor.com">management@echelonoutdoor.com</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- WHAT TO EXPECT -->
+  <section class="expect-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>What Happens Next</h2>
+        <p>So you know exactly what you're getting into when you reach out.</p>
+      </div>
+      <div class="expect-grid">
+        <div class="expect-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="expect-num">1</div>
+          <div>
+            <h4>We Get Back to You Fast</h4>
+            <p>No automated replies. A real person responds with actual answers, usually same day.</p>
+          </div>
+        </div>
+        <div class="expect-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="expect-num">2</div>
+          <div>
+            <h4>We Ask the Right Questions</h4>
+            <p>Market, audience, timeline, budget — we'll figure out what's relevant and what's not worth your time.</p>
+          </div>
+        </div>
+        <div class="expect-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="expect-num">3</div>
+          <div>
+            <h4>You Get a Real Plan</h4>
+            <p>Not a brochure. Actual placements, formats, and pricing based on your goals — with no obligation to move forward.</p>
+          </div>
+        </div>
+        <div class="expect-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="expect-num">4</div>
+          <div>
+            <h4>We Can Hold Inventory</h4>
+            <p>If something looks right, we can put units on hold while you finalize. Good placements move — we'll make sure you don't lose out.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIRING NOTE -->
+  <div class="hiring-note">
+    Interested in joining the team? Send your resume to <a href="mailto:hiring@echelonoutdoor.com">hiring@echelonoutdoor.com</a>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-logo">
         <img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.png" alt="Echelon Outdoor">
-        <p>Your on-call billboard partner for unbeatable reach and results.</p>
+        <p>Your on-call out-of-home partner. We make OOH simpler, more strategic, and more accessible — for brands at every stage.</p>
       </div>
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="/Contact/">Contact</a></li>
+          <li><a href="/Services/">Services</a></li>
+          <li><a href="/Why-Us/">Why Us</a></li>
         </ul>
       </div>
       <div class="footer-links">
@@ -334,7 +442,7 @@
         <ul>
           <li><i class="fas fa-phone"></i> (305) 771-5230</li>
           <li><i class="fas fa-envelope"></i> info@echelonoutdoor.com</li>
-          <li><i class="fas fa-map-marker-alt"></i> Nationwide Service</li>
+          <li><i class="fas fa-map-marker-alt"></i> Nationwide Campaign Execution</li>
         </ul>
       </div>
     </div>
@@ -343,7 +451,9 @@
     </div>
   </footer>
 
-  <a href="tel:3057715230" class="sticky-cta"><i class="fas fa-phone-alt"></i></a>
+  <a href="tel:3057715230" class="sticky-cta" aria-label="Call Echelon Outdoor">
+    <i class="fas fa-phone-alt"></i>
+  </a>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
