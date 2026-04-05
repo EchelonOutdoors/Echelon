@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Outreach | Echelon Outdoor</title>
+  <meta name="description" content="Done-for-you cold email outreach. We identify your ideal clients, write AI-personalized sequences, and send at scale — you just close the deals.">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #ffffff;
+      --bg-dark: #121618;
+      --brand-primary: #c41e3a;
+      --brand-secondary: #1e3a8a;
+      --accent-gold: #d4af37;
+      --text-main: #1f2937;
+      --text-light: #f3f4f6;
+      --text-muted: #6b7280;
+      --border-light: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Montserrat', sans-serif; background: var(--bg-main); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
+    a { color: inherit; text-decoration: none; }
+    nav { position: fixed; width: 100%; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-light); z-index: 1000; transition: background 0.3s; }
+    nav.scrolled { background: rgba(255,255,255,0.98); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .nav-inner { max-width: 1400px; margin: auto; padding: 1.2rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .nav-inner img { height: 140px; transition: height 0.3s; }
+    #nav-menu { list-style: none; display: flex; gap: 2.5rem; margin: 0; padding: 0; }
+    #nav-menu a { font-weight: 600; color: var(--text-main); position: relative; transition: color 0.3s; }
+    #nav-menu a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -6px; left: 0; background: var(--brand-primary); transition: width 0.3s; }
+    #nav-menu a:hover, #nav-menu a.active { color: var(--brand-primary); }
+    #nav-menu a:hover::after, #nav-menu a.active::after { width: 100%; }
+    .menu-toggle { display: none; }
+    @media (max-width: 900px) {
+      .menu-toggle { display: flex; flex-direction: column; gap: 6px; cursor: pointer; }
+      .menu-toggle span { width: 30px; height: 3px; background: var(--brand-primary); transition: 0.3s; }
+      #nav-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: white; flex-direction: column; padding: 2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+      #nav-menu.active { display: flex; }
+    }
+    .hero { min-height: 80vh; background: linear-gradient(135deg, var(--bg-dark) 0%, #1a0a10 50%, #0f1a2e 100%); display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 6rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(196,30,58,0.15) 0%, transparent 60%), radial-gradient(ellipse at 20% 70%, rgba(30,58,138,0.12) 0%, transparent 50%); }
+    .hero-content { max-width: 850px; color: white; position: relative; z-index: 1; }
+    .eyebrow { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 1.5rem; display: block; }
+    .hero-content h1 { font-size: clamp(2.8rem, 6vw, 5rem); margin: 0 0 1.5rem; line-height: 1.15; }
+    .hero-content h1 span { color: var(--brand-primary); }
+    .hero-content p { font-size: 1.25rem; color: rgba(255,255,255,0.8); max-width: 680px; margin: 0 auto 2.5rem; }
+    .hero-cta { display: inline-block; padding: 1rem 2.5rem; background: var(--brand-primary); color: white; font-weight: 700; font-size: 1.05rem; border-radius: 50px; transition: 0.3s; }
+    .hero-cta:hover { background: #a0172c; transform: translateY(-4px); box-shadow: 0 12px 32px rgba(196,30,58,0.45); }
+    .hero-sub { margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.45); }
+    .stats-bar { background: white; border-bottom: 1px solid var(--border-light); padding: 2.5rem 2rem; }
+    .stats-inner { max-width: 1100px; margin: auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+    .stat-item strong { display: block; font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--brand-primary); line-height: 1; }
+    .stat-item span { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-top: 0.4rem; display: block; }
+    @media (max-width: 700px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } }
+    .container { max-width: 1200px; margin: auto; }
+    .section-header { text-align: center; margin-bottom: 4rem; }
+    .section-header .eyebrow { margin-bottom: 0.75rem; }
+    .section-header h2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--brand-primary); margin: 0 0 1rem; }
+    .section-header p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+    .how-it-works { padding: 7rem 2rem; background: #f8fafc; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; position: relative; }
+    .steps::before { content: ''; position: absolute; top: 2.5rem; left: 16%; right: 16%; height: 2px; background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary)); opacity: 0.25; }
+    .step-card { background: white; border-radius: 20px; padding: 2.5rem 2rem; text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,0.07); transition: transform 0.35s, box-shadow 0.35s; }
+    .step-card:hover { transform: translateY(-10px); box-shadow: 0 16px 48px rgba(0,0,0,0.12); }
+    .step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--brand-primary); color: white; font-family: 'Playfair Display', serif; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
+    .step-card h3 { font-size: 1.4rem; margin: 0 0 0.75rem; color: var(--text-main); }
+    .step-card p { font-size: 0.95rem; color: var(--text-muted); margin: 0; }
+    @media (max-width: 800px) { .steps { grid-template-columns: 1fr; } .steps::before { display: none; } }
+    .included { padding: 7rem 2rem; background: white; }
+    .included-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .included-card { background: #f8fafc; border: 1px solid var(--border-light); border-radius: 16px; padding: 2rem; transition: border-color 0.3s, box-shadow 0.3s; }
+    .included-card:hover { border-color: var(--brand-primary); box-shadow: 0 8px 32px rgba(196,30,58,0.08); }
+    .included-card i { font-size: 2rem; color: var(--brand-primary); margin-bottom: 1rem; display: block; }
+    .included-card h4 { font-size: 1.15rem; margin: 0 0 0.5rem; color: var(--text-main); }
+    .included-card p { font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
+    .for-section { padding: 7rem 2rem; background: var(--bg-dark); color: white; }
+    .for-section .section-header h2 { color: var(--accent-gold); }
+    .for-section .section-header p { color: rgba(255,255,255,0.6); }
+    .for-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .for-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1.75rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; transition: background 0.3s; }
+    .for-item:hover { background: rgba(255,255,255,0.07); }
+    .for-item i { font-size: 1.5rem; color: var(--accent-gold); flex-shrink: 0; margin-top: 0.1rem; }
+    .for-item div h4 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+    .for-item div p { margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+    .cta-section { padding: 7rem 2rem; background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary)); color: white; text-align: center; }
+    .cta-section h2 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 1.25rem; }
+    .cta-section p { font-size: 1.15rem; max-width: 700px; margin: 0 auto 2.5rem; opacity: 0.9; }
+    .cta-button { display: inline-block; padding: 1.15rem 3rem; background: var(--accent-gold); color: var(--bg-dark); font-weight: 700; border-radius: 50px; font-size: 1.1rem; transition: 0.3s; }
+    .cta-button:hover { background: #c19a2b; transform: scale(1.05); }
+    .footer { background: var(--bg-dark); color: var(--text-light); padding: 4rem 2rem 2rem; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: 1400px; margin: auto; margin-bottom: 3rem; }
+    .footer-logo img { height: 60px; margin-bottom: 1rem; }
+    .footer-links h4 { color: var(--accent-gold); margin-bottom: 1rem; font-family: 'Montserrat', sans-serif; }
+    .footer-links ul { list-style: none; padding: 0; }
+    .footer-links a { display: block; margin-bottom: 0.8rem; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--accent-gold); }
+    .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; font-size: 0.9rem; max-width: 1400px; margin: 0 auto; }
+    .sticky-cta { position: fixed; bottom: 30px; right: 30px; background: var(--brand-primary); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 10px 30px rgba(196,30,58,0.4); z-index: 999; transition: 0.3s; }
+    .sticky-cta:hover { transform: scale(1.1); background: #a0172c; }
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/"><img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg" alt="Echelon Outdoor Logo"></a>
+    <div class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></div>
+    <ul id="nav-menu">
+      <li><a href="/Services/">Services</a></li>
+      <li><a href="/Why-Us/">Why Us</a></li>
+      <li><a href="/Outbound/" class="active">Email Outreach</a></li>
+      <li><a href="/Contact/">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-content" data-aos="fade-up">
+    <span class="eyebrow">Email Outreach · Done For You</span>
+    <h1>We Fill Your Pipeline.<br><span>You Close the Deals.</span></h1>
+    <p>We identify your ideal clients, write AI-personalized multi-step email sequences, and send at scale — so you can focus on running your business, not hunting for new ones.</p>
+    <a href="/Contact/" class="hero-cta">Book a Free Strategy Call</a>
+    <p class="hero-sub">No setup fees. Results in 2–3 weeks.</p>
+  </div>
+</section>
+<div class="stats-bar" data-aos="fade-up">
+  <div class="stats-inner">
+    <div class="stat-item"><strong>50+</strong><span>Warmed Sending Inboxes</span></div>
+    <div class="stat-item"><strong>3-Step</strong><span>Follow-Up Sequences</span></div>
+    <div class="stat-item"><strong>AI</strong><span>Personalized Per Contact</span></div>
+    <div class="stat-item"><strong>Live</strong><span>Client Results Dashboard</span></div>
+  </div>
+</div>
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="eyebrow">The Process</span>
+      <h2>How It Works</h2>
+      <p>From brief to booked meetings — we handle everything in between.</p>
+    </div>
+    <div class="steps">
+      <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-num">1</div>
+        <h3>Define Your Ideal Client</h3>
+        <p>Tell us who you want to reach — industry, job title, company size, location, revenue range. The more specific, the better.</p>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-num">2</div>
+        <h3>We Write & Build Everything</h3>
+        <p>We source verified leads and our AI writes personalized cold email sequences for every single contact — subject lines, body copy, follow-ups.</p>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-num">3</div>
+        <h3>Campaigns Go Live</h3>
+        <p>Emails go out from dedicated warmed domains at safe sending volumes. You get a live dashboard to track opens, replies, and results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="included">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="eyebrow">Everything Handled</span>
+      <h2>What's Included</h2>
+      <p>A full done-for-you outreach operation — no extra tools, no extra headcount.</p>
+    </div>
+    <div class="included-grid">
+      <div class="included-card" data-aos="fade-up" data-aos-delay="50"><i class="fas fa-user-check"></i><h4>Verified Lead Sourcing</h4><p>We build a targeted list of decision-makers matching your ideal customer profile — no junk contacts, no bounces.</p></div>
+      <div class="included-card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-pen-nib"></i><h4>AI-Personalized Emails</h4><p>Every email is written specifically for each contact — not a mass blast. Personalized subject lines, openers, and value props.</p></div>
+      <div class="included-card" data-aos="fade-up" data-aos-delay="150"><i class="fas fa-layer-group"></i><h4>Multi-Step Follow-Up Sequences</h4><p>3-touch sequences that keep you top of mind without being annoying — cold email, bump, and a clean breakup email.</p></div>
+      <div class="included-card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-server"></i><h4>Dedicated Warmed Inboxes</h4><p>We send from purpose-built domains with warmed email accounts — your primary domain stays clean and deliverability stays high.</p></div>
+      <div class="included-card" data-aos="fade-up" data-aos-delay="250"><i class="fas fa-chart-line"></i><h4>Branded Client Dashboard</h4><p>A private link showing your campaign stats in real time — opens, replies, and campaign progress. No logins required.</p></div>
+      <div class="included-card" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-headset"></i><h4>Ongoing Management</h4><p>We monitor deliverability, rotate inboxes as needed, and optimize copy based on what's working. Hands-off for you.</p></div>
+    </div>
+  </div>
+</section>
+<section class="for-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="eyebrow">Is This Right For You?</span>
+      <h2>Who We Work With</h2>
+      <p>Outbound works best when you have a clear ideal client and a real offer. If that's you, we'll find them.</p>
+    </div>
+    <div class="for-list">
+      <div class="for-item" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-store"></i><div><h4>Outdoor & Sporting Brands</h4><p>Looking to land wholesale accounts, retail partnerships, or B2B distribution deals at scale.</p></div></div>
+      <div class="for-item" data-aos="fade-up" data-aos-delay="150"><i class="fas fa-building"></i><div><h4>B2B Service Companies</h4><p>Agencies, consultants, and service firms targeting specific industries or company sizes with a clear offer.</p></div></div>
+      <div class="for-item" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-rocket"></i><div><h4>Growing Brands Ready to Scale</h4><p>You've got a proven product or service and need a consistent, predictable lead flow to fuel growth.</p></div></div>
+      <div class="for-item" data-aos="fade-up" data-aos-delay="250"><i class="fas fa-ban"></i><div><h4>Done Waiting on Inbound</h4><p>You're tired of relying on referrals and ads. You want to go find the right people — not wait for them to find you.</p></div></div>
+    </div>
+  </div>
+</section>
+<section class="cta-section" data-aos="fade-up">
+  <div class="container">
+    <h2>Ready to Build Your Pipeline?</h2>
+    <p>Tell us who you want to reach. We'll put together a custom outreach plan — no commitment required.</p>
+    <a href="/Contact/" class="cta-button">Book a Free Strategy Call</a>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-logo"><img src="https://EchelonOutdoors.github.io/Echelon/EchelonLogo.jpg" alt="Echelon Outdoor"><p>Your on-call outreach partner — OOH advertising and done-for-you email outbound.</p></div>
+    <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="/Services/">Services</a></li><li><a href="/Why-Us/">Why Us</a></li><li><a href="/Outbound/">Email Outreach</a></li><li><a href="/Contact/">Contact</a></li></ul></div>
+    <div class="footer-links"><h4>Contact Us</h4><ul><li><i class="fas fa-phone"></i> (305) 771-5230</li><li><i class="fas fa-envelope"></i> info@echelonoutdoor.com</li><li><i class="fas fa-map-marker-alt"></i> Nationwide Campaign Execution</li></ul></div>
+  </div>
+  <div class="footer-bottom">© 2025 Echelon Outdoor. All rights reserved.</div>
+</footer>
+<a href="/Contact/" class="sticky-cta"><i class="fas fa-phone-alt"></i></a>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+  document.getElementById('menu-toggle').onclick = () => document.getElementById('nav-menu').classList.toggle('active');
+  window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50));
+</script>
+</body>
+</html>
