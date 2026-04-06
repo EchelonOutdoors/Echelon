@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Studies | Echelon Outdoor</title>
+  <meta name="description" content="See how Echelon Outdoor fills pipelines for outdoor, sporting, and B2B brands with done-for-you email outreach and OOH advertising campaigns."/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #ffffff;
+      --bg-dark: #121618;
+      --brand-primary: #c41e3a;
+      --brand-secondary: #1e3a8a;
+      --accent-gold: #d4af37;
+      --text-main: #1f2937;
+      --text-light: #f3f4f6;
+      --text-muted: #6b7280;
+      --border-light: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Montserrat', sans-serif; background: var(--bg-main); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
+    a { color: inherit; text-decoration: none; }
+    nav { position: fixed; width: 100%; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-light); z-index: 1000; transition: background 0.3s, box-shadow 0.3s; }
+    nav.scrolled { background: rgba(255,255,255,0.98); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .nav-inner { max-width: 1400px; margin: auto; padding: 1.2rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .nav-inner img { height: 52px; transition: height 0.3s; }
+    #nav-menu { list-style: none; display: flex; gap: 2.5rem; margin: 0; padding: 0; }
+    #nav-menu a { font-weight: 600; color: var(--text-main); position: relative; transition: color 0.3s; font-size: 0.95rem; }
+    #nav-menu a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--brand-primary); transition: width 0.3s; }
+    #nav-menu a:hover, #nav-menu a.active { color: var(--brand-primary); }
+    #nav-menu a:hover::after, #nav-menu a.active::after { width: 100%; }
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 1.4rem; }
+    .hero { min-height: 60vh; background: linear-gradient(135deg, var(--bg-dark) 0%, #1e1012 50%, #0d1a3a 100%); display: flex; align-items: center; padding: 8rem 2rem 5rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(196,30,58,0.15) 0%, transparent 60%); }
+    .hero-content { max-width: 800px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+    .eyebrow { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 1rem; }
+    .hero-content h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); color: #fff; line-height: 1.15; margin: 0 0 1.2rem; }
+    .hero-content h1 span { color: var(--brand-primary); }
+    .hero-content p { font-size: 1.15rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; }
+    .stats-bar { background: #fff; border-bottom: 1px solid var(--border-light); }
+    .stats-inner { max-width: 1400px; margin: auto; padding: 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .stat-item { text-align: center; padding: 1rem; border-right: 1px solid var(--border-light); }
+    .stat-item:last-child { border-right: none; }
+    .stat-item strong { display: block; font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--brand-primary); line-height: 1; margin-bottom: 0.3rem; }
+    .stat-item span { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; color: var(--brand-primary); text-transform: uppercase; margin-bottom: 0.8rem; }
+    section h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin: 0 0 1rem; color: var(--text-main); }
+    .featured-section { padding: 6rem 2rem; background: var(--bg-main); }
+    .featured-card { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; background: #fff; border: 1px solid var(--border-light); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 40px rgba(0,0,0,0.06); }
+    .featured-visual { background: linear-gradient(135deg, var(--bg-dark) 0%, #1e0a12 100%); height: 100%; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem; gap: 1.5rem; }
+    .result-badge { text-align: center; }
+    .result-badge .number { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 700; color: var(--accent-gold); line-height: 1; }
+    .result-badge .label { font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
+    .result-divider { width: 40px; height: 2px; background: rgba(255,255,255,0.2); }
+    .featured-body { padding: 3rem 3rem 3rem 0; }
+    .industry-tag { display: inline-block; background: rgba(196,30,58,0.08); color: var(--brand-primary); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 20px; margin-bottom: 1rem; }
+    .featured-body h3 { font-size: 1.8rem; margin: 0 0 1rem; line-height: 1.3; }
+    .featured-body .challenge { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7; }
+    .result-list { list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .result-list li { display: flex; align-items: flex-start; gap: 0.7rem; font-size: 0.95rem; }
+    .result-list li i { color: var(--brand-primary); margin-top: 0.15rem; font-size: 0.9rem; flex-shrink: 0; }
+    .quote-block { background: var(--text-light); border-left: 4px solid var(--brand-primary); padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; font-size: 0.9rem; font-style: italic; color: var(--text-muted); line-height: 1.7; }
+    .quote-block cite { display: block; font-style: normal; font-weight: 700; color: var(--text-main); margin-top: 0.5rem; font-size: 0.85rem; }
+    .grid-section { padding: 5rem 2rem; background: #f9fafb; }
+    .grid-section .section-header { text-align: center; margin-bottom: 3rem; }
+    .cs-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .cs-card { background: #fff; border: 1px solid var(--border-light); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+    .cs-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+    .cs-card-header { background: linear-gradient(135deg, var(--brand-secondary) 0%, #0d1a3a 100%); padding: 1.8rem; }
+    .cs-card-header .metric { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; color: var(--accent-gold); line-height: 1; margin-bottom: 0.2rem; }
+    .cs-card-header .metric-label { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; }
+    .cs-card-body { padding: 1.6rem; }
+    .cs-card-body .tag { font-size: 0.72rem; font-weight: 700; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.6rem; }
+    .cs-card-body h4 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 0 0 0.7rem; line-height: 1.4; }
+    .cs-card-body p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0 0 1rem; }
+    .cs-card-stats { display: flex; gap: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border-light); }
+    .cs-stat { text-align: center; flex: 1; }
+    .cs-stat .val { font-weight: 700; font-size: 1.1rem; color: var(--text-main); }
+    .cs-stat .lbl { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .cs-card.placeholder .cs-card-header { background: linear-gradient(135deg, #374151 0%, #1f2937 100%); }
+    .cs-card.placeholder .metric { color: rgba(255,255,255,0.3); }
+    .coming-label { display: inline-block; background: var(--text-light); color: var(--text-muted); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 20px; margin-bottom: 0.6rem; }
+    .measure-section { padding: 5rem 2rem; background: var(--bg-main); }
+    .measure-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .measure-list { display: flex; flex-direction: column; gap: 1.6rem; margin-top: 2rem; }
+    .measure-item { display: flex; gap: 1.2rem; }
+    .measure-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(196,30,58,0.08); display: flex; align-items: center; justify-content: center; color: var(--brand-primary); font-size: 1rem; flex-shrink: 0; margin-top: 0.15rem; }
+    .measure-item h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; margin: 0 0 0.3rem; }
+    .measure-item p { font-size: 0.88rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
+    .measure-visual { background: linear-gradient(135deg, var(--bg-dark) 0%, #0d1a3a 100%); border-radius: 16px; padding: 2.5rem; }
+    .dashboard-mock { display: flex; flex-direction: column; gap: 1rem; }
+    .dash-row { display: flex; gap: 1rem; }
+    .dash-tile { flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1.2rem; text-align: center; }
+    .dash-tile .dt-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--accent-gold); line-height: 1; }
+    .dash-tile .dt-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem; }
+    .dash-bar-row { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1.2rem; }
+    .dash-bar-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-bottom: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+    .dash-bars { display: flex; flex-direction: column; gap: 0.5rem; }
+    .dash-bar-item { display: flex; align-items: center; gap: 0.8rem; font-size: 0.78rem; color: rgba(255,255,255,0.6); }
+    .dash-bar-item .bar-track { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+    .dash-bar-item .bar-fill { height: 100%; border-radius: 3px; background: var(--brand-primary); }
+    .cta-section { padding: 6rem 2rem; background: linear-gradient(135deg, var(--bg-dark) 0%, #1e0a12 50%, #0d1a3a 100%); text-align: center; }
+    .cta-section h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #fff; margin: 0 0 1rem; }
+    .cta-section p { color: rgba(255,255,255,0.65); font-size: 1.05rem; max-width: 560px; margin: 0 auto 2.5rem; }
+    .cta-button { display: inline-block; background: var(--brand-primary); color: #fff; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; font-size: 1rem; transition: background 0.3s, transform 0.2s; }
+    .cta-button:hover { background: #a01830; transform: translateY(-2px); }
+    .footer { background: var(--bg-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; }
+    .container.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; }
+    .footer-logo img { height: 50px; margin-bottom: 0.8rem; }
+    .footer-logo p { font-size: 0.85rem; line-height: 1.6; max-width: 280px; }
+    .footer-links h4 { color: #fff; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 1rem; }
+    .footer-links ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-links li a { font-size: 0.88rem; transition: color 0.3s; }
+    .footer-links li a:hover { color: var(--brand-primary); }
+    .footer-links li i { margin-right: 0.4rem; color: var(--brand-primary); font-size: 0.8rem; }
+    .footer-bottom { max-width: 1400px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.82rem; }
+    .sticky-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999; background: var(--brand-primary); color: #fff; width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 20px rgba(196,30,58,0.4); transition: transform 0.2s, box-shadow 0.2s; }
+    .sticky-cta:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(196,30,58,0.5); }
+    @media (max-width: 900px) {
+      .featured-card { grid-template-columns: 1fr; }
+      .featured-visual { min-height: 240px; }
+      .featured-body { padding: 2rem; }
+      .cs-grid { grid-template-columns: 1fr 1fr; }
+      .measure-inner { grid-template-columns: 1fr; }
+      .container.footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .cs-grid { grid-template-columns: 1fr; }
+      #nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 1rem 2rem; border-top: 1px solid var(--border-light); gap: 1rem; }
+      #nav-menu.active { display: flex; }
+      .menu-toggle { display: block; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="/"><img src="https://www.echelonoutdoor.com/EchelonLogo.png" alt="Echelon Outdoor Logo"/></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+      <ul id="nav-menu">
+        <li><a href="/Services/">Services</a></li>
+        <li><a href="/Why-Us/">Why Us</a></li>
+        <li><a href="/Outbound/">Email Outreach</a></li>
+        <li><a href="/Case-Studies/" class="active">Case Studies</a></li>
+        <li><a href="/Contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <p class="eyebrow">Real Clients · Real Results</p>
+      <h1>Campaigns That <span>Fill Pipelines</span></h1>
+      <p>Every engagement below represents a real business that trusted Echelon to build their outbound engine. Here's what happened.</p>
+    </div>
+  </section>
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="0"><strong>50+</strong><span>Warmed Sending Inboxes</span></div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="80"><strong>3-Step</strong><span>Follow-Up Sequences</span></div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="160"><strong>100%</strong><span>Personalized Per Contact</span></div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="240"><strong>Live</strong><span>Client Results Dashboard</span></div>
+    </div>
+  </div>
+  <section class="featured-section">
+    <div class="container"><p class="section-label" data-aos="fade-up">Featured Case Study</p></div>
+    <div class="featured-card" data-aos="fade-up" data-aos-delay="100" style="max-width:1200px; margin: 1rem auto 0;">
+      <div class="featured-visual">
+        <div class="result-badge"><div class="number">[X]</div><div class="label">Meetings Booked</div></div>
+        <div class="result-divider"></div>
+        <div class="result-badge"><div class="number">[X]%</div><div class="label">Reply Rate</div></div>
+        <div class="result-divider"></div>
+        <div class="result-badge"><div class="number">3wks</div><div class="label">Time to First Lead</div></div>
+      </div>
+      <div class="featured-body">
+        <span class="industry-tag">[Industry]</span>
+        <h3>[Client Type & Goal]</h3>
+        <p class="challenge"><strong>The challenge:</strong> [Describe the client situation in 1-2 sentences.]</p>
+        <p class="challenge"><strong>What we did:</strong> [Describe the campaign approach.]</p>
+        <ul class="result-list">
+          <li><i class="fas fa-check-circle"></i> [Result 1 — e.g. 14 qualified meetings booked in first 6 weeks]</li>
+          <li><i class="fas fa-check-circle"></i> [Result 2 — e.g. 4.8% reply rate, above 1-2% industry average]</li>
+          <li><i class="fas fa-check-circle"></i> [Result 3 — e.g. 2 new accounts signed within 60 days]</li>
+        </ul>
+        <div class="quote-block">
+          "[Client testimonial quote here.]"
+          <cite>— [Name, Title, Company]</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="grid-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">More Results</p>
+        <h2>Across Industries &amp; Offer Types</h2>
+      </div>
+      <div class="cs-grid">
+        <div class="cs-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="cs-card-header"><div class="metric">[X] Deals</div><div class="metric-label">Closed from outreach</div></div>
+          <div class="cs-card-body">
+            <div class="tag">[Industry]</div>
+            <h4>[Client type &amp; challenge summary]</h4>
+            <p>[2-3 sentence description of what the client needed and what Echelon delivered.]</p>
+            <div class="cs-card-stats">
+              <div class="cs-stat"><div class="val">[X]%</div><div class="lbl">Reply Rate</div></div>
+              <div class="cs-stat"><div class="val">[X]</div><div class="lbl">Meetings</div></div>
+              <div class="cs-stat"><div class="val">[X]wk</div><div class="lbl">To Launch</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="cs-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="cs-card-header"><div class="metric">[X]%</div><div class="metric-label">Increase in pipeline</div></div>
+          <div class="cs-card-body">
+            <div class="tag">[Industry]</div>
+            <h4>[Client type &amp; challenge summary]</h4>
+            <p>[2-3 sentence description of what the client needed and what Echelon delivered.]</p>
+            <div class="cs-card-stats">
+              <div class="cs-stat"><div class="val">[X]</div><div class="lbl">Leads/Mo</div></div>
+              <div class="cs-stat"><div class="val">[X]</div><div class="lbl">Accounts</div></div>
+              <div class="cs-stat"><div class="val">[X]wk</div><div class="lbl">To Launch</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="cs-card placeholder" data-aos="fade-up" data-aos-delay="200">
+          <div class="cs-card-header"><div class="metric">—</div><div class="metric-label">Results incoming</div></div>
+          <div class="cs-card-body">
+            <span class="coming-label">In Progress</span>
+            <h4>Campaign launching Q2 2025</h4>
+            <p>We're currently running a campaign in this vertical. Check back soon — or book a call to get your own results.</p>
+            <div class="cs-card-stats">
+              <div class="cs-stat"><div class="val">—</div><div class="lbl">Reply Rate</div></div>
+              <div class="cs-stat"><div class="val">—</div><div class="lbl">Meetings</div></div>
+              <div class="cs-stat"><div class="val">2-3wk</div><div class="lbl">Avg Launch</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="measure-section">
+    <div class="container measure-inner">
+      <div data-aos="fade-right">
+        <p class="section-label">Our Approach</p>
+        <h2>How We Measure What Matters</h2>
+        <p style="color: var(--text-muted); margin-bottom: 0;">We don't report vanity metrics. Every campaign is measured against the outcomes that actually move your business forward.</p>
+        <div class="measure-list">
+          <div class="measure-item"><div class="measure-icon"><i class="fas fa-calendar-check"></i></div><div><h4>Meetings Booked</h4><p>The primary KPI — qualified conversations added to your calendar, not just "interest."</p></div></div>
+          <div class="measure-item"><div class="measure-icon"><i class="fas fa-reply"></i></div><div><h4>Positive Reply Rate</h4><p>We track positive, negative, and out-of-office replies separately so you see real engagement, not noise.</p></div></div>
+          <div class="measure-item"><div class="measure-icon"><i class="fas fa-envelope-open"></i></div><div><h4>Deliverability &amp; Open Rate</h4><p>50+ warmed inboxes and careful sending cadences keep your messages out of spam.</p></div></div>
+          <div class="measure-item"><div class="measure-icon"><i class="fas fa-chart-line"></i></div><div><h4>Pipeline Value Built</h4><p>At month-end, we review not just activity but estimated deal value entering your funnel.</p></div></div>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="100">
+        <div class="measure-visual">
+          <div class="dashboard-mock">
+            <div class="dash-row">
+              <div class="dash-tile"><div class="dt-num">47</div><div class="dt-lbl">Meetings</div></div>
+              <div class="dash-tile"><div class="dt-num">4.2%</div><div class="dt-lbl">Reply Rate</div></div>
+              <div class="dash-tile"><div class="dt-num">62%</div><div class="dt-lbl">Open Rate</div></div>
+            </div>
+            <div class="dash-bar-row">
+              <div class="dash-bar-label">Monthly Pipeline Progress</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Studies | Echelon Outdoor</title>
+  <meta name="description" content="See how Echelon Outdoor fills pipelines for outdoor, sporting, and B2B brands with done-for-you email outreach and OOH advertising campaigns."/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #ffffff;
+      --bg-dark: #121618;
+      --brand-primary: #c41e3a;
+      --brand-secondary: #1e3a8a;
+      --accent-gold: #d4af37;
+      --text-main: #1f2937;
+      --text-light: #f3f4f6;
+      --text-muted: #6b7280;
+      --border-light: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-light);
+      z-index: 1000;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    nav.scrolled { background: rgba(255,255,255,0.98); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .nav-inner { max-width: 1400px; margin: auto; padding: 1.2rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .nav-inner img { height: 52px; transition: height 0.3s; }
+    #nav-menu { list-style: none; display: flex; gap: 2.5rem; margin: 0; padding: 0; }
+    #nav-menu a { font-weight: 600; color: var(--text-main); position: relative; transition: color 0.3s; font-size: 0.95rem; }
+    #nav-menu a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--brand-primary); transition: width 0.3s; }
+    #nav-menu a:hover, #nav-menu a.active { color: var(--brand-primary); }
+    #nav-menu a:hover::after, #nav-menu a.active::after { width: 100%; }
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 1.4rem; }
+
+    /* HERO */
+    .hero {
+      min-height: 60vh;
+      background: linear-gradient(135deg, var(--bg-dark) 0%, #1e1012 50%, #0d1a3a 100%);
+      display: flex;
+      align-items: center;
+      padding: 8rem 2rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(196,30,58,0.15) 0%, transparent 60%);
+    }
+    .hero-content { max-width: 800px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+    .eyebrow { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 1rem; }
+    .hero-content h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); color: #fff; line-height: 1.15; margin: 0 0 1.2rem; }
+    .hero-content h1 span { color: var(--brand-primary); }
+    .hero-content p { font-size: 1.15rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; }
+
+    /* STATS BAR */
+    .stats-bar { background: #fff; border-bottom: 1px solid var(--border-light); }
+    .stats-inner { max-width: 1400px; margin: auto; padding: 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .stat-item { text-align: center; padding: 1rem; border-right: 1px solid var(--border-light); }
+    .stat-item:last-child { border-right: none; }
+    .stat-item strong { display: block; font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--brand-primary); line-height: 1; margin-bottom: 0.3rem; }
+    .stat-item span { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* CONTAINER */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+    /* SECTION LABELS */
+    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; color: var(--brand-primary); text-transform: uppercase; margin-bottom: 0.8rem; }
+    section h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin: 0 0 1rem; color: var(--text-main); }
+
+    /* FEATURED CASE STUDY */
+    .featured-section { padding: 6rem 2rem; background: var(--bg-main); }
+    .featured-card {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.06);
+    }
+    .featured-visual {
+      background: linear-gradient(135deg, var(--bg-dark) 0%, #1e0a12 100%);
+      height: 100%;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      gap: 1.5rem;
+    }
+    .result-badge {
+      text-align: center;
+    }
+    .result-badge .number { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 700; color: var(--accent-gold); line-height: 1; }
+    .result-badge .label { font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
+    .result-divider { width: 40px; height: 2px; background: rgba(255,255,255,0.2); }
+    .featured-body { padding: 3rem 3rem 3rem 0; }
+    .industry-tag {
+      display: inline-block;
+      background: rgba(196,30,58,0.08);
+      color: var(--brand-primary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+    .featured-body h3 { font-size: 1.8rem; margin: 0 0 1rem; line-height: 1.3; }
+    .featured-body .challenge { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7; }
+    .result-list { list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .result-list li { display: flex; align-items: flex-start; gap: 0.7rem; font-size: 0.95rem; }
+    .result-list li i { color: var(--brand-primary); margin-top: 0.15rem; font-size: 0.9rem; flex-shrink: 0; }
+    .quote-block {
+      background: var(--text-light);
+      border-left: 4px solid var(--brand-primary);
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .quote-block cite { display: block; font-style: normal; font-weight: 700; color: var(--text-main); margin-top: 0.5rem; font-size: 0.85rem; }
+
+    /* CASE STUDY GRID */
+    .grid-section { padding: 5rem 2rem; background: #f9fafb; }
+    .grid-section .section-header { text-align: center; margin-bottom: 3rem; }
+    .cs-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .cs-card {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .cs-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+    .cs-card-header { background: linear-gradient(135deg, var(--brand-secondary) 0%, #0d1a3a 100%); padding: 1.8rem; }
+    .cs-card-header .metric { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; color: var(--accent-gold); line-height: 1; margin-bottom: 0.2rem; }
+    .cs-card-header .metric-label { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; }
+    .cs-card-body { padding: 1.6rem; }
+    .cs-card-body .tag { font-size: 0.72rem; font-weight: 700; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.6rem; }
+    .cs-card-body h4 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 0 0 0.7rem; line-height: 1.4; }
+    .cs-card-body p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0 0 1rem; }
+    .cs-card-stats { display: flex; gap: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border-light); }
+    .cs-stat { text-align: center; flex: 1; }
+    .cs-stat .val { font-weight: 700; font-size: 1.1rem; color: var(--text-main); }
+    .cs-stat .lbl { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* COMING SOON STATE */
+    .cs-card.placeholder .cs-card-header { background: linear-gradient(135deg, #374151 0%, #1f2937 100%); }
+    .cs-card.placeholder .metric { color: rgba(255,255,255,0.3); }
+    .cs-card.placeholder .metric-label { color: rgba(255,255,255,0.3); }
+    .coming-label {
+      display: inline-block;
+      background: var(--text-light);
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-bottom: 0.6rem;
+    }
+
+    /* PROCESS / HOW WE MEASURE */
+    .measure-section { padding: 5rem 2rem; background: var(--bg-main); }
+    .measure-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .measure-list { display: flex; flex-direction: column; gap: 1.6rem; margin-top: 2rem; }
+    .measure-item { display: flex; gap: 1.2rem; }
+    .measure-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(196,30,58,0.08); display: flex; align-items: center; justify-content: center; color: var(--brand-primary); font-size: 1rem; flex-shrink: 0; margin-top: 0.15rem; }
+    .measure-item h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; margin: 0 0 0.3rem; }
+    .measure-item p { font-size: 0.88rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
+    .measure-visual { background: linear-gradient(135deg, var(--bg-dark) 0%, #0d1a3a 100%); border-radius: 16px; padding: 2.5rem; }
+    .dashboard-mock { display: flex; flex-direction: column; gap: 1rem; }
+    .dash-row { display: flex; gap: 1rem; }
+    .dash-tile {
+      flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px; padding: 1.2rem; text-align: center;
+    }
+    .dash-tile .dt-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--accent-gold); line-height: 1; }
+    .dash-tile .dt-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem; }
+    .dash-bar-row { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1.2rem; }
+    .dash-bar-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-bottom: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+    .dash-bars { display: flex; flex-direction: column; gap: 0.5rem; }
+    .dash-bar-item { display: flex; align-items: center; gap: 0.8rem; font-size: 0.78rem; color: rgba(255,255,255,0.6); }
+    .dash-bar-item .bar-track { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+    .dash-bar-item .bar-fill { height: 100%; border-radius: 3px; background: var(--brand-primary); }
+
+    /* CTA */
+    .cta-section {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, var(--bg-dark) 0%, #1e0a12 50%, #0d1a3a 100%);
+      text-align: center;
+    }
+    .cta-section h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #fff; margin: 0 0 1rem; }
+    .cta-section p { color: rgba(255,255,255,0.65); font-size: 1.05rem; max-width: 560px; margin: 0 auto 2.5rem; }
+    .cta-button {
+      display: inline-block;
+      background: var(--brand-primary);
+      color: #fff;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .cta-button:hover { background: #a01830; transform: translateY(-2px); }
+
+    /* FOOTER */
+    .footer { background: var(--bg-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; }
+    .container.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; }
+    .footer-logo img { height: 50px; margin-bottom: 0.8rem; }
+    .footer-logo p { font-size: 0.85rem; line-height: 1.6; max-width: 280px; }
+    .footer-links h4 { color: #fff; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 1rem; }
+    .footer-links ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-links li a { font-size: 0.88rem; transition: color 0.3s; }
+    .footer-links li a:hover { color: var(--brand-primary); }
+    .footer-links li i { margin-right: 0.4rem; color: var(--brand-primary); font-size: 0.8rem; }
+    .footer-bottom { max-width: 1400px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.82rem; }
+    .sticky-cta {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999;
+      background: var(--brand-primary); color: #fff;
+      width: 54px; height: 54px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; box-shadow: 0 4px 20px rgba(196,30,58,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .sticky-cta:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(196,30,58,0.5); }
+
+    @media (max-width: 900px) {
+      .featured-card { grid-template-columns: 1fr; }
+      .featured-visual { min-height: 240px; }
+      .featured-body { padding: 2rem; }
+      .cs-grid { grid-template-columns: 1fr 1fr; }
+      .measure-inner { grid-template-columns: 1fr; }
+      .container.footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
+    }
+    @media (max-width: 600px) {
+      .cs-grid { grid-template-columns: 1fr; }
+      #nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 1rem 2rem; border-top: 1px solid var(--border-light); gap: 1rem; }
+      #nav-menu.active { display: flex; }
+      .menu-toggle { display: block; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="/"><img src="https://www.echelonoutdoor.com/EchelonLogo.png" alt="Echelon Outdoor Logo"/></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+      <ul id="nav-menu">
+        <li><a href="/Services/">Services</a></li>
+        <li><a href="/Why-Us/">Why Us</a></li>
+        <li><a href="/Outbound/">Email Outreach</a></li>
+        <li><a href="/Case-Studies/" class="active">Case Studies</a></li>
+        <li><a href="/Contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <p class="eyebrow">Real Clients Â· Real Results</p>
+      <h1>Campaigns That <span>Fill Pipelines</span></h1>
+      <p>Every engagement below represents a real business that trusted Echelon to build their outbound engine. Here's what happened.</p>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+        <strong>50+</strong><span>Warmed Sending Inboxes</span>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="80">
+        <strong>3-Step</strong><span>Follow-Up Sequences</span>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="160">
+        <strong>100%</strong><span>Personalized Per Contact</span>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="240">
+        <strong>Live</strong><span>Client Results Dashboard</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED CASE STUDY -->
+  <section class="featured-section">
+    <div class="container">
+      <p class="section-label" data-aos="fade-up">Featured Case Study</p>
+    </div>
+    <div class="featured-card" data-aos="fade-up" data-aos-delay="100" style="max-width:1200px; margin: 1rem auto 0;">
+      <div class="featured-visual">
+        <div class="result-badge">
+          <div class="number">[X]</div>
+          <div class="label">Meetings Booked</div>
+        </div>
+        <div class="result-divider"></div>
+        <div class="result-badge">
+          <div class="number">[X]%</div>
+          <div class="label">Reply Rate</div>
+        </div>
+        <div class="result-divider"></div>
+        <div class="result-badge">
+          <div class="number">3wks</div>
+          <div class="label">Time to First Lead</div>
+        </div>
+      </div>
+      <div class="featured-body">
+        <span class="industry-tag">[Industry â e.g. Outdoor / Sporting Goods]</span>
+        <h3>[Client Type â e.g. Wholesale Outdoor Brand Seeking Retail Partners]</h3>
+        <p class="challenge"><strong>The challenge:</strong> [Describe the client's situation in 1â2 sentences â e.g. "This brand had a strong product but was entirely reliant on trade shows to find new retailers. They had no repeatable outbound process."]</p>
+        <p class="challenge"><strong>What we did:</strong> [Describe the campaign â e.g. "We built a targeted list of independent outdoor retailers and sporting goods buyers across the US, wrote a 4-step personalized sequence, and launched across 12 warmed inboxes."]</p>
+        <ul class="result-list">
+          <li><i class="fas fa-check-circle"></i> [Result 1 â e.g. 14 qualified meetings booked in the first 6 weeks]</li>
+          <li><i class="fas fa-check-circle"></i> [Result 2 â e.g. 4.8% reply rate, well above the 1â2% industry average]</li>
+          <li><i class="fas fa-check-circle"></i> [Result 3 â e.g. 2 new wholesale accounts signed within 60 days]</li>
+        </ul>
+        <div class="quote-block">
+          "[Client testimonial quote here â e.g. 'Echelon filled our calendar with buyers we'd never have reached on our own. The ROI was clear within weeks.']"
+          <cite>â [Name, Title, Company]</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY GRID -->
+  <section class="grid-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">More Results</p>
+        <h2>Across Industries & Offer Types</h2>
+      </div>
+      <div class="cs-grid">
+
+        <!-- CARD 1 -->
+        <div class="cs-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="cs-card-header">
+            <div class="metric">[X] Deals</div>
+            <div class="metric-label">Closed from outreach</div>
+          </div>
+          <div class="cs-card-body">
+            <div class="tag">[Industry â e.g. B2B Services]</div>
+            <h4>[Client type & challenge summary]</h4>
+            <p>[2â3 sentence description of what the client needed and what Echelon delivered.]</p>
+            <div class="cs-card-stats">
+              <div class="cs-stat"><div class="val">[X]%</div><div class="lbl">Reply Rate</div></div>
+              <div class="cs-stat"><div class="val">[X]</div><div class="lbl">Meetings</div></div>
+              <div class="cs-stat"><div class="val">[X]wk</div><div class="lbl">To Launch</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="cs-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="cs-card-header">
+            <div class="metric">[X]%</div>
+            <div class="metric-label">Increase in pipeline</div>
+          </div>
+          <div class="cs-card-body">
+            <div class="tag">[Industry â e.g. OOH / Advertising]</div>
+            <h4>[Client type & challenge summary]</h4>
+            <p>[2â3 sentence description of what the client needed and what Echelon delivered.]</p>
+            <div class="cs-card-stats">
+              <div class="cs-stat"><div class="val">[X]</div><div class="lbl">Leads/Mo</div></div>
+              <div class="cs-stat"><div class="val">[X]</div><div class="lbl">Accounts</div></div>
+              <div class="cs-stat"><div class="val">[X]wk</div><div class="lbl">To Launch</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: PLACEHOLDER -->
+        <div class="cs-card placeholder" data-aos="fade-up" data-aos-delay="200">
+          <div class="cs-card-header">
+            <div class="metric">â</div>
+            <div class="metric-label">Results incoming</div>
+          </div>
+          <div class="cs-card-body">
+            <span class="coming-label">In Progress</span>
+            <h4>Campaign launching Q2 2025</h4>
+            <p>We're currently running a campaign in this vertical. Check back soon for results â or book a call to get your own.</p>
+            <div class="cs-card-stats">
+              <div class="cs-stat"><div class="val">â</div><div class="lbl">Reply Rate</div></div>
+              <div class="cs-stat"><div class="val">â</div><div class="lbl">Meetings</div></div>
+              <div class="cs-stat"><div class="val">2â3wk</div><div class="lbl">Avg Launch</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE MEASURE SUCCESS -->
+  <section class="measure-section">
+    <div class="container measure-inner">
+      <div data-aos="fade-right">
+        <p class="section-label">Our Approach</p>
+        <h2>How We Measure What Matters</h2>
+        <p style="color: var(--text-muted); margin-bottom: 0;">We don't report vanity metrics. Every campaign is measured against the outcomes that actually move your business forward.</p>
+        <div class="measure-list">
+          <div class="measure-item">
+            <div class="measure-icon"><i class="fas fa-calendar-check"></i></div>
+            <div>
+              <h4>Meetings Booked</h4>
+              <p>The primary KPI â qualified conversations added to your calendar, not just "interest."</p>
+            </div>
+          </div>
+          <div class="measure-item">
+            <div class="measure-icon"><i class="fas fa-reply"></i></div>
+            <div>
+              <h4>Positive Reply Rate</h4>
+              <p>We track positive, negative, and out-of-office replies separately so you see real engagement, not noise.</p>
+            </div>
+          </div>
+          <div class="measure-item">
+            <div class="measure-icon"><i class="fas fa-envelope-open"></i></div>
+            <div>
+              <h4>Deliverability & Open Rate</h4>
+              <p>50+ warmed inboxes and careful sending cadences keep your messages out of spam.</p>
+            </div>
+          </div>
+          <div class="measure-item">
+            <div class="measure-icon"><i class="fas fa-chart-line"></i></div>
+            <div>
+              <h4>Pipeline Value Built</h4>
+              <p>At month-end, we review not just activity but estimated deal value entering your funnel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="100">
+        <div class="measure-visual">
+          <div class="dashboard-mock">
+            <div class="dash-row">
+              <div class="dash-tile"><div class="dt-num">47</div><div class="dt-lbl">Meetings</div></div>
+              <div class="dash-tile"><div class="dt-num">4.2%</div><div class="dt-lbl">Reply Rate</div></div>
+              <div class="dash-tile"><div class="dt-num">62%</div><div class="dt-lbl">Open Rate</div></div>
+            </div>
+            <div class="dash-bar-row">
+              <div class="dash-bar-label">Monthly Pipeline Progress</div>
+              <div class="dash-bars">
+                <div class="dash-bar-item">
+                  <span style="width:60px; text-align:right; font-size:0.72rem;">Week 1</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+                  <span>3 leads</span>
+                </div>
+                <div class="dash-bar-item">
+                  <span style="width:60px; text-align:right; font-size:0.72rem;">Week 2</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+                  <span>9 leads</span>
+                </div>
+                <div class="dash-bar-item">
+                  <span style="width:60px; text-align:right; font-size:0.72rem;">Week 3</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:75%"></div></div>
+                  <span>14 leads</span>
+                </div>
+                <div class="dash-bar-item">
+                  <span style="width:60px; text-align:right; font-size:0.72rem;">Week 4</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+                  <span>21 leads</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" data-aos="fade-up">
+    <div class="container">
+      <h2>Ready to Build Your Pipeline?</h2>
+      <p>Tell us who you want to reach. We'll put together a custom outreach plan â no commitment required.</p>
+      <a href="/Contact/" class="cta-button">Book a Free Strategy Call</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-logo">
+        <img src="https://www.echelonoutdoor.com/EchelonLogo.png" alt="Echelon Outdoor">
+        <p>Your on-call outreach partner â OOH advertising and done-for-you email outbound.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/Services/">Services</a></li>
+          <li><a href="/Why-Us/">Why Us</a></li>
+          <li><a href="/Outbound/">Email Outreach</a></li>
+          <li><a href="/Case-Studies/">Case Studies</a></li>
+          <li><a href="/Contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> (305) 771-5230</li>
+          <li><i class="fas fa-envelope"></i> info@echelonoutdoor.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Nationwide</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">Â© 2025 Echelon Outdoor. All rights reserved.</div>
+  </footer>
+
+  <a href="/Contact/" class="sticky-cta"><i class="fas fa-phone-alt"></i></a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    document.getElementById('menu-toggle').onclick = () => document.getElementById('nav-menu').classList.toggle('active');
+    window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50));
+  </script>
+</body>
+</html>
